@@ -1,0 +1,3529 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VSIET - Landing_page</title>
+    <link rel="shortcut icon" type="image/x-icon" href="assets/images/vsiet_favi.png">
+    <!-- animate css -->
+    <link rel="stylesheet" href="assets/css/plugins/animate.min.css">
+    <!-- fontawesome 6.4.2 -->
+    <link rel="stylesheet" href="assets/css/plugins/fontawesome.min.css">
+    <!-- bootstrap min css -->
+    <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css">
+    <!-- swiper Css 10.2.0 -->
+    <link rel="stylesheet" href="assets/css/plugins/swiper.min.css">
+    <!-- Bootstrap 5.0.2 -->
+    <link rel="stylesheet" href="assets/css/vendor/magnific-popup.css">
+    <!-- metismenu scss -->
+    <link rel="stylesheet" href="assets/css/vendor/metismenu.css">
+    <!-- nice select js -->
+    <link rel="stylesheet" href="assets/css/plugins/nice-select.css">
+    <link rel="stylesheet" href="assets/css/plugins/jquery-ui.css">
+    <!-- custom style css -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<link rel="stylesheet" type="text/css" href="assets/css/adons.css">
+
+<body>
+    <style>
+       a#followLink {
+      position: absolute;
+      padding: 12px 24px;
+      background: #fff;
+      color:  #890C25;
+      border-radius: 30px;
+      transform: translate(-50%, -50%);
+      font-weight: bold;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      transition: background 0.3s, color 0.3s;
+      text-decoration: none;
+      cursor: pointer;
+      z-index: 9999;
+      pointer-events: auto;
+    }
+
+    a#followLink:hover {
+      background:  #890C25;
+      color: #fff;
+    }
+
+    /* Shake Animation */
+    @keyframes shake {
+      0%   { transform: translate(-50%, -50%) translate(0px, 0px); }
+      25%  { transform: translate(-50%, -50%) translate(2px, -2px); }
+      50%  { transform: translate(-50%, -50%) translate(-2px, 2px); }
+      75%  { transform: translate(-50%, -50%) translate(2px, 2px); }
+      100% { transform: translate(-50%, -50%) translate(0px, 0px); }
+    }
+
+    .shake {
+      animation: shake 0.3s infinite;
+    }
+
+    </style>
+    <a href="https://vocationalservices.in/vsiet_web/eligibility-admission-process" id="followLink">Apply Now</a>
+
+  <script>
+    const link = document.getElementById('followLink');
+
+    let targetX = 0, targetY = 0;
+    let currentX = 0, currentY = 0;
+    let isScrolling = false;
+    let scrollTimer;
+
+    // Track mouse position including scroll
+    document.addEventListener('mousemove', (e) => {
+      const scrollX = window.scrollX || 0;
+      const scrollY = window.scrollY || 0;
+      targetX = e.clientX + scrollX;
+      targetY = e.clientY + scrollY;
+    });
+
+    window.addEventListener('scroll', () => {
+      if (!isScrolling) {
+        link.classList.add('shake');
+      }
+
+      isScrolling = true;
+
+      clearTimeout(scrollTimer);
+      scrollTimer = setTimeout(() => {
+        isScrolling = false;
+        link.classList.remove('shake');
+      }, 100);
+    });
+
+    // Animate smoothly toward targetX, targetY
+    function animate() {
+      if (isScrolling) {
+        currentX += (targetX - currentX) * 0.15;
+        currentY += (targetY - currentY) * 0.15;
+
+        link.style.left = currentX + 'px';
+        link.style.top = currentY + 'px';
+      }
+      requestAnimationFrame(animate);
+    }
+
+    animate();
+  </script>
+
+    <style>
+        .link-81 {
+            color: #192F59;
+            /*font-size: 20px;*/
+            text-decoration: none;
+            padding: 5px 15px;
+            /*margin: 0 5px;*/
+            position: relative;
+            display: inline-block;
+            transition: all 0.3s ease-in-out;
+            border: solid 1px #192F59;
+        }
+
+        .link-81::before {
+            content: "";
+            position: absolute;
+            background: #192F59;
+            width: 0;
+            height: 100%;
+            left: 0;
+            top: 0;
+            z-index: -1;
+            transition: width 0.3s ease-in-out;
+        }
+
+        .link-81:hover {
+            color: #fff;
+        }
+
+        .link-81:hover::before {
+            width: 100%;
+        }
+
+        .link-81:hover {
+            z-index: 1;
+        }
+    </style>
+
+    <link rel="stylesheet" type="text/css" href="assets/css/adons.css">
+
+    <body>
+        <!-- header area start -->
+        <div class="header header__sticky v__3">
+            <div class="container-fluid header-top">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="header__wrapper" style="display: flex;">
+
+                            <div class="col-lg-6 col-md-6 col-xs-12">
+                                <div class="d-flex align-items-center">
+                                    <div class="header-right float-lg-right" style=" text-align: center; ">
+                                        <!-- <a href="#">Important Notice</a> -->
+                                        <a href="https://vocationalservices.in/vsiet_web/events">Events</a>
+                                        <a href="#">Carrer</a>
+                                        <a href="#">Grievance</a>
+                                        <a href="https://vocationalservices.in/vsiet_web/contact_us">Contact us</a>
+                                    </div>
+                                    <!-- <form action="#" class="header-form ml-3">
+                            <input type="text" class="form-control" placeholder="search">
+                            <i class="fa fa-search"></i>
+                    </form>  -->
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6 col-md-6 col-xs-12">
+                                <div class="header__social__link col text-light float-end text-end ">
+
+                                    <a href="callto:+91-9311857965" target="_blank"><i class="fa fa-phone"
+                                            aria-hidden="true"></i> +91-9311857965</a>
+                                    <a href="https://maps.app.goo.gl/EPYsGHyAQHo81Fwm8" target="_blank"><i
+                                            class="fa fa-map-marker" aria-hidden="true"></i> View Map</a>
+
+                                    <!--<a href="#"><i class="fa-brands fa-linkedin"></i></a>-->
+                                    <!--<a href="https://www.youtube.com/@vsiet_grnoida" target="_blank"><i class="fa-brands fa-youtube"></i></a>-->
+                                    <!--<a href="https://x.com/vsiet_grnoida" target="_blank"><i class="fa-brands fa-twitter"  style="color: #fff;"></i></a>-->
+                                    <!-- <a href="#"><i class="fa fa-map-marker"  style="color: #fff;"></i></a> -->
+                                </div>
+
+                                <!--       <div class="header-socials social-links d-xl-block float-lg-right header-right" style="color: #fff;">
+                            <a href="#"><i class="fab fa-facebook-f" style="color: #fff;"></i></a>
+                            <a href="#"><i class="fab fa-twitter"  style="color: #fff;"></i></a>
+                            <a href="#"><i class="fab fa-linkedin"  style="color: #fff;"></i></a>
+                            <a href="#"><i class="fab fa-instagram"  style="color: #fff;"></i></a>
+                            <a href="#"><i class="fab fa-youtube"  style="color: #fff;"></i></a>
+                            <a href="#"><i class="fa fa-map-marker"  style="color: #fff;"></i></a>
+                            <a href="#"><i class="fa fa-phone"  style="color: #fff;"></i> <span style="color: #fff;"> +91-9811000000</span></a>
+                       <a href="#"><i class="fab fa-mail"  style="color: #fff;"></i> <span style="color: #fff;"> +91-9811000000</span></a>
+                            
+                        </div> -->
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <header class="header header__sticky v__3">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="header__wrapper">
+                            <div class="header__center__content"
+                                style="display: flex; justify-content: space-between; align-items: center;">
+                                <!-- menu left side -->
+                                <div class="header__menu">
+                                    <div class="navigation">
+                                        <nav class="navigation__menu">
+                                            <ul>
+                                                <li class="navigation__menu--item "><a
+                                                        href="#"
+                                                        class="navigation__menu--item__link"
+                                                        style="margin-right: -20px;">Home</a></li>
+                                                <li class="navigation__menu--item"><a href="#education-about"
+                                                        class="navigation__menu--item__link">About US</a>
+
+                                                </li>
+                                                <li class="navigation__menu--item"><a href="#education-placement"
+                                                        class="navigation__menu--item__link">Placement</a>
+                                                </li>
+                                                <li class="navigation__menu--item"><a href="#education-academics"
+                                                        class="navigation__menu--item__link">Academic</a>
+                                                </li>
+
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                </div>
+
+                                <!-- menu left side end -->
+                                <div class="header__logo">
+                                    <a href="#" class="header__logo--link">
+                                        <img src="assets/images/logo/vsit_sq_png.png" alt="unipix" class="img_1">
+                                        <img src="https://vocationalservices.in/vsiet/assets/images/VSIT%20LOGO_PNG_new.png"
+                                            alt="VSIET" class="img-fluid img">
+                                        <!-- <img src="https://vocationalservices.in/vsiet/assets/images/VSIT%20LOGO_PNG_new.png" alt="unipix" > -->
+                                    </a>
+                                </div>
+
+                                <!-- menu right side -->
+                                <div class="header__menu">
+                                    <div class="navigation">
+                                        <nav class="navigation__menu">
+                                            <ul>
+                                                <li class="navigation__menu--item"><a href="#education-faculty"
+                                                        class="navigation__menu--item__link">Faculty</a>
+                                                </li>
+                                                <li class="navigation__menu--item"><a href="#campus_life"
+                                                        class="navigation__menu--item__link">Life @VSIET</a>
+                                                </li>
+                                                <li class="navigation__menu--item"><a href="#education-infra"
+                                                        class="navigation__menu--item__link">Infra</a>
+                                                </li>
+
+                                                <!--<li class="navigation__menu--item"><a href="contact.html" class="navigation__menu--item__link" style="margin-right: -20px;">Life @VSIET</a></li>-->
+                                                <li class="navigation__menu--item"><a href="contact_us"
+                                                        class="navigation__menu--item__link">Contact</a></li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="header__right">
+                                <div class="header__right--item" style="position: absolute;   left: 89%;     top: 26%;">
+                                    <div id="menu-btn" class="menu__trigger line3" style=""><img
+                                            src="assets/images/icon/menu__bar.svg" alt="bar">
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- header style two -->
+        <div id="side-bar" class="side-bar">
+            <button class="close-icon-menu"><i class="far fa-times"></i></button>
+            <!-- inner menu area desktop start -->
+            <div class="inner-main-wrapper-desk">
+                <div class="thumbnail">
+                    <img src="assets/images/logo/vsit_sq_png.png" alt="VSIET">
+                </div>
+                <div class="inner-content">
+                    <p class="disc">
+                        The Vikram Sarabhai Institute of Engineering & Technology (VSIET) is more than just a college—it
+                        is a transformative educational hub known for innovation, excellence, and impact.
+                    </p>
+                    <!-- offcanvase banner -->
+                    <div class="offcanvase__banner mt--50">
+                        <div class="offcanvase__banner--content">
+                            <img src="assets/images/program/mba_about.jpg" alt="offcanvase">
+                            <a href="#" class="rts-theme-btn">Apply Now</a>
+                        </div>
+                    </div>
+                    <div class="offcanvase__info">
+                        <div class="offcanvase__info--content">
+                            <a href="callto:+91-9311857965"><i class="fa-thin fa-phone"></i> +91-9311857965</a>
+                            <a href="https://maps.app.goo.gl/EPYsGHyAQHo81Fwm8" target="_blank"><i
+                                    class="fa-sharp fa-light fa-location-dot"></i> Plot No.- 6B/1, Knowledge Park-2,
+                                Greater Noida, G.B.Nagar, UP-201306 </a>
+                            <div class="offcanvase__info--content--social">
+                                <p class="title">Follow Us:</p>
+                                <div class="social__links">
+                                    <a href="https://www.facebook.com/vsietgrnoida" target="_blank"><i
+                                            class="fa-brands fa-facebook"></i></a>
+                                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                                    <a href="https://x.com/vsiet_grnoida" target="_blank"><i
+                                            class="fa-brands fa-x-twitter"></i></a>
+                                    <a href="https://www.youtube.com/@vsiet_grnoida" target="_blank"><i
+                                            class="fa-brands fa-youtube"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- mobile menu area start -->
+            <div class="mobile-menu-main">
+                <nav class="nav-main mainmenu-nav mt--30">
+                    <ul class="mainmenu metismenu" id="mobile-menu-active">
+
+                        <li class="">
+                            <a href="https://vocationalservices.in/vsiet_web/" class="main">Home</a>
+
+                        </li>
+
+                        <li class="has-droupdown">
+                            <a href="#" class="main">About Us</a>
+                        </li>
+                        <li class="has-droupdown">
+                            <a href="#" class="main">Academics</a>
+                        </li>
+                        <li class="has-droupdown">
+                            <a href="#" class="main">Admission</a>
+                        </li>
+                        <li class="has-droupdown">
+                            <a href="#" class="main">Placement</a>
+                        </li>
+                        <li class="has-droupdown">
+                            <a href="#" class="main">Infrstructure</a>
+                        </li>
+                        <li class="has-droupdown">
+                            <a href="#" class="main">Life @VSIET</a>
+                        </li>
+                        <li>
+                            <a href="contact_us" class="main">Contact Us</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <div class="offcanvase__info--content mt--30" style="color: #000 Important;">
+                    <a href="callto:+91-9311857965"><span style="color: #000 Important;"><i
+                                class="fa-thin fa-phone"></i> +91-9311857965</span></a>
+                    <a href="https://maps.app.goo.gl/EPYsGHyAQHo81Fwm8" target="_blank"><span
+                            style="color: #000 Important;"><i class="fa-sharp fa-light fa-location-dot"></i> Plot No.-
+                            6B/1, Knowledge Park-2, Greater Noida, G.B.Nagar, UP-201306</span> </a>
+                    <div class="offcanvase__info--content--social">
+                        <p class="title">Follow Us:</p>
+                        <!-- partial:index.partial.html -->
+                        <div class="social-icons">
+                            <a href="https://www.facebook.com/vsietgrnoida" target="_blank" title="facebook">
+                                <span style="color: #000 Important;"></span> <i class="fa fa-facebook-square"
+                                    aria-hidden="true"></i>
+                            </a>
+                            <a href="https://x.com/vsiet_grnoida" target="_blank" title="twitter">
+                                <i class="fa fa-twitter-square" aria-hidden="true"></i>
+                            </a>
+                            <a href="#" title="instagram">
+                                <i class="fa fa-instagram" aria-hidden="true"></i>
+                            </a>
+                            <a href="#" title="youtube">
+                                <i class="fa-brands fa-square-x-twitter" aria-hidden="true"></i>
+                            </a>
+
+                            <a href="#" title="pinterest">
+                                <i class="fa fa-pinterest-square" aria-hidden="true"></i>
+                            </a>
+
+                        </div>
+                        <!-- partial -->
+                    </div>
+                </div>
+            </div>
+            <!-- mobile menu area end -->
+        </div>
+        <!-- header style two End -->
+        <!-- header area end -->
+
+        <style>
+            @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            .slide-main-img-wrapper img {
+                width: 100%;
+                height: 100%;
+                /* object-fit: cover; */
+                will-change: transform;
+            }
+            .slide-bg-img img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                will-change: transform;
+            }
+            .slider3 p {
+                color: #fff;
+                font-size: 0.75rem;
+                font-weight: 500;
+            }
+
+            .nav-items {
+                display: flex;
+                gap: 2rem;
+            }
+
+            .slider3 {
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                width: 100vw;
+                padding: 3rem;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                z-index: 2;
+            }
+
+            .slider-counter {
+                display: flex;
+            }
+
+            .slider-counter p,
+            .slider-counter>div {
+                width: 1.5rem;
+                display: flex;
+                justify-content: center;
+            }
+
+            .slider-counter p {
+                opacity: 0.35;
+            }
+
+            .count {
+                position: relative;
+                height: 1.125rem;
+                clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+            }
+
+            .count p {
+                position: absolute;
+                transform: translateY(0px);
+                font-size: 1rem;
+                line-height: 1;
+                will-change: transform;
+                opacity: 1;
+            }
+
+            .slider {
+                position: relative;
+                width: 100vw;
+                height: 100vh;
+                overflow: hidden;
+            }
+
+            .slide {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+
+            .slide-bg-img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+                will-change: clip-path;
+            }
+
+            .slide-bg-img::after {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                display: block;
+                background-color: rgba(0, 0, 0, 0.5);
+            }
+
+            .slide-main-img {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 35%;
+                height: 50%;
+                z-index: 2;
+                box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
+                    rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+            }
+
+            .slide-main-img-wrapper {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+                will-change: clip-path;
+            }
+
+            .slide-copy {
+                position: absolute;
+                top: 50%;
+                left: 15%;
+                transform: translate(-15%, -50%);
+                color: #fff;
+                z-index: 2;
+                text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+            }
+
+            .slide-title {
+                position: relative;
+                width: 500px;
+                height: 50px;
+                margin-bottom: 0.75rem;
+                clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+            }
+
+            .slide-title h1 {
+                position: absolute;
+                color: #fff;
+                font-size: 3rem;
+                font-weight: 700;
+                line-height: 1;
+                transform: translateY(0px);
+                will-change: transform;
+            }
+
+            .slide-description {
+                position: relative;
+                width: 500px;
+                height: 20px;
+                clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+            }
+
+            .slide-description p {
+                position: absolute;
+                color: #fff;
+                font-size: 1.125rem;
+                font-weight: 600;
+                line-height: 1;
+                transform: translateY(0px);
+                will-change: transform;
+            }
+
+            @media (max-width: 900px) {
+                .slide-main-img {
+                    width: 85%;
+                }
+
+                .slide-copy {
+                    width: 75%;
+                    top: 70%;
+                    left: 50%;
+                    transform: translate(-50%, -70%);
+                }
+
+                .slide-title,
+                .slide-description {
+                    width: 100%;
+                }
+            }
+
+            .arrow {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                font-size: 2.5rem;
+                color: white;
+                background-color: rgba(0, 0, 0, 0.4);
+                padding: 0.5rem 1rem;
+                border-radius: 50%;
+                cursor: pointer;
+                z-index: 10;
+                -webkit-user-select: none;
+                user-select: none;
+                transition: background-color 0.3s ease;
+            }
+
+            .arrow:hover {
+                background-color: rgba(0, 0, 0, 0.7);
+            }
+
+            .arrow.left {
+                left: 10rem;
+            }
+
+            .arrow.right {
+                right: 10rem;
+            }
+        </style>
+
+        <section class="slider3">
+            <div class="slider-counter">
+                <div class="count">
+                    <p>1</p>
+                </div>
+                <p>/</p>
+                <p>4</p>
+            </div>
+        </section>
+
+        <div class="slider">
+            <div class="arrow left">&#10094;</div>
+            <div class="arrow right">&#10095;</div>
+            <div class="slide">
+                <div class="slide-bg-img">
+                    <img src="slider/web_slide01.jpg" alt="">
+                </div>
+            </div>
+
+            <div class="slide-main-img">
+                <div class="slide-main-img-wrapper">
+                    <img src="slider/web_slide01.jpg" alt="">
+                </div>
+            </div>
+
+            <div class="slide-copy">
+                <div class="slide-title">
+                </div>
+                <div class="slide-description">
+                </div>
+            </div>
+        </div>
+        <script src="indexarrowscript.js"></script>
+
+
+
+        <!-- GSAP dependencies -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/CustomEase.min.js"></script>
+
+
+        <!--marquee-->
+        <div class="container-fluid" style="background-color:#890C25;">
+            <div class="container">
+                <div class="col-lg-12">
+                    <div class="container002">
+                        <div class="headertext"><span class="span_bod">Latested Updates &nbsp;</span></div>
+                        <div>
+                            <marquee style="width:100%;color:#fff; padding-top: 4px;" onmouseover="this.stop();"
+                                onmouseout="this.start();" direction="left" behavior="scroll" scrollamount="7">
+                                B.Tech Admissions 2025-2029 <a href="eligibility-admission-process" target="_blank"
+                                    class="marquee-button">Know More</a> | MBA - Admissions 2025-2027 <a
+                                    href="eligibility-admission-process" target="_blank"
+                                    class="marquee-button">Apply</a>
+                            </marquee>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- marquee end---->
+
+
+        <!-- our program -->
+        <section class="program rts-section-padding" style="background-color: #fff;" id="education-about">
+            <div class="container">
+                <div class="row justify-content-center align-items-center">
+                    <div class="col-lg-5">
+                        <div class="rts__section--wrapper v__2">
+                            <div class="about__right--content--sub1">
+                                <img src="assets/images/icon/e-cap-pix.svg" alt="cap">
+                                Innovating Today, Shaping Tomorrow
+                            </div>
+                            <h2 class="rts__section--title text-capitalize">About <span class="text-theme-colored2"
+                                    style="transition: none; text-align: center; line-height: 70px; border-width: 0px; margin: 0px; padding: 0px; letter-spacing: 0px; font-weight: 800; color: #890C25;">VSIET</span>
+                            </h2>
+                            <p class="rts__section--description" style="text-align: justify; ">The <strong>Vikram
+                                    Sarabhai Institute of Engineering & Technology (VSIET)</strong> is more than just a
+                                college—it is a transformative educational hub known for innovation, excellence, and
+                                impact. VSIET prepares students for future careers by equipping them with cutting-edge
+                                knowledge, relevant skills, and a growth-oriented mindset in the dynamic fields of
+                                engineering and management. VSIET is accredited by the <strong>All India Council for
+                                    Technical Education (AICTE), Ministry of Education, Government of India</strong>,
+                                and is affiliated with <strong>Dr. A.P.J. Abdul Kalam Technical University (AKTU),
+                                    Lucknow</strong>. The institute offers academically rigorous programs infused with
+                                practical applications, ensuring students master both theoretical foundations and
+                                hands-on experience tailored to industry needs. What sets VSIET apart is its mission to
+                                nurture not just employable graduates, but socially responsible leaders ready to make
+                                meaningful contributions. Our students are encouraged to innovate, conduct impactful
+                                research, and contribute to community development through academic, entrepreneurial, and
+                                service initiatives.</p>
+
+                            <!--<div class="campus__vector">-->
+                            <!--    <img src="assets/images/campus/campus__vector.svg" alt="">-->
+                            <!--</div>-->
+                            <!--<a href="academic.html" class="rts-theme-btn btn-arrow">View All Program-->
+                            <!--    <span><i class="fa-regular fa-arrow-right"></i></span>-->
+                            <!--</a>-->
+                            <a href="about_us" class="rts-theme-btn btn-arrow">Apply Now
+                                <span><i class="fa-regular fa-arrow-right"></i></span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12 col-sm-10 mt-5 mt-md-0">
+                        <div class="row g-5">
+                            <div class="col-lg-6 col-md-6">
+                                <style>
+                                    .program__content:hover .rts__program--item{
+                                        transform: rotateY(180deg);
+                                    }
+                                </style>
+                                <div class="program__content">
+                                    <style>
+                                        .rts__program--item {
+                                            position: relative;
+                                            width: 100%;
+                                            height: 100%;
+                                            text-align: center;
+                                            transition: transform 0.6s;
+                                            transform-style: preserve-3d;
+                                            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+                                        }
+
+                                        .rts-nbg-btn,
+                                        .rts__program--item--title,
+                                        .rts__program--item--description {
+                                            /* background-image: url(); */
+                                            /* color: white; */
+                                            transform: rotateY(180deg);
+                                        }
+                                        .rts__program--item:hover .rts__program--item--title--show{
+                                            transform: rotateY(180deg);
+                                        }
+                                    </style>
+                                    <div class="rts__program--item v__2"
+                                        style="background-image: url(assets/images/program/btech_about.jpg);">
+                                        <h5 class="rts__program--item--title"
+                                            style="text-shadow: 0px 4px 3px #890c25, 0px 8px 13px rgba(0, 0, 0, 0.1), 0px 18px 23px rgba(0, 0, 0, 0)">
+                                            <i class="fa-solid fa-lightbulb-on"></i> Vision
+                                        </h5>
+                                        <p class="rts__program--item--description">Our vision is to be a globally
+                                            recognized Engineering and Management Institute...</p>
+                                        <a href="about_us" class="rts-nbg-btn btn-arrow">Apply Now<span><i
+                                                    class="fa-sharp fa-regular fa-arrow-right"></i>
+                                            </span></a>
+                                        <h5 class="rts__program--item--title--show"><i
+                                                class="fa-solid fa-lightbulb-on"></i> Vision</h5>
+                                    </div>
+                                    <!-- second one -->
+                                    <div class="rts__program--item v__2"
+                                        style="background-image: url(assets/images/program/about_ran.jpg);">
+                                        <h5 class="rts__program--item--title"><i class="fa-solid fa-bullseye-arrow"></i>
+                                            Mission</h5>
+                                        <p class="rts__program--item--description">Become a globally recognized
+                                            Engineering and Management Institute though...</p>
+                                        <a href="about_us" class="rts-nbg-btn btn-arrow">Apply Now<span><i
+                                                    class="fa-sharp fa-regular fa-arrow-right"></i>
+                                            </span></a>
+                                        <h5 class="rts__program--item--title--show"><i
+                                                class="fa-solid fa-bullseye-arrow"></i> Mission</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6">
+                                <div class="program__content mt--85">
+                                    <div class="rts__program--item v__2"
+                                        style="background-image: url(assets/images/program/mba_about.jpg);">
+                                        <h5 class="rts__program--item--title"><i
+                                                class="fa-solid fa-bullseye-pointer"></i> Goals</h5>
+                                        <p class="rts__program--item--description">Deliver outcome-based
+                                            education.Enhance employability and entrepreneurial mindset...</p>
+                                        <a href="about_us" class="rts-nbg-btn btn-arrow">Apply Now<span><i
+                                                    class="fa-sharp fa-regular fa-arrow-right"></i>
+                                            </span></a>
+                                        <h5 class="rts__program--item--title--show"><i
+                                                class="fa-solid fa-bullseye-pointer"></i> Goals</h5>
+                                    </div>
+                                    <!-- second one -->
+                                    <div class="rts__program--item v__2"
+                                        style="background-image: url(assets/images/program/about_spl.jpg);">
+                                        <h5 class="rts__program--item--title"><i class="fa-solid fa-circle-star"></i>
+                                            Core Values</h5>
+                                        <p class="rts__program--item--description">: VSIET inculcate core values that
+                                            drive its vision and mission to attain excellence….</p>
+                                        <a href="about_us" class="rts-nbg-btn btn-arrow">Apply Now<span><i
+                                                    class="fa-sharp fa-regular fa-arrow-right"></i>
+                                            </span></a>
+                                        <h5 class="rts__program--item--title--show"><i
+                                                class="fa-solid fa-circle-star"></i> Core Values</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- our program end -->
+
+        <!-- about us -->
+        <section class="about v__2 pt--120 pb--80" style="background-color: #f7f7f7;">
+            <div class="container">
+                <div class="row justify-content-md-center g-5">
+                    <div class="col-lg-6 col-md-9">
+                        <div class="about__left--content">
+                            <div class="about__left--content--left">
+                                <img src="assets/images/program/mba_prog02.jpg" alt="">
+                            </div>
+                            <div class="about__left--content--center">
+                                <div class="rts__circle v__1">
+                                    <svg class="spinner" viewBox="0 0 100 100">
+                                        <defs>
+                                            <path id="circle" d="M50,50 m-37,0a37,37 0 1,1 74,0a37,37 0 1,1 -74,0">
+                                            </path>
+                                        </defs>
+                                        <text>
+                                            <textPath xlink:href="#circle">Vikram Sarabhai Institute of Engineering &
+                                                Technology
+                                            </textPath>
+                                        </text>
+                                    </svg>
+                                    <div class="rts__circle--icon">
+                                        <i class="fa-light fa-arrow-right"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="about__left--content--right">
+                                <img src="assets/images/program/btech_prog01.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-9">
+                        <div class="about__right--content">
+                            <div class="about__right--content--sub">
+                                <img src="assets/images/icon/e-cap-pix.svg" alt="cap">
+                                Future Leaders, Engineered Today
+                            </div>
+                            <h2 class="rts__section--title text-capitalize">VSIET <span class="text-theme-colored2"
+                                    style="transition: none; text-align: center; line-height: 70px; border-width: 0px; margin: 0px; padding: 0px; letter-spacing: 0px; font-weight: 800; color: #890C25;">
+                                    Offers Programs</span></h2>
+
+                            <p class="about__right--content--description">At <strong> Vikram Sarabhai Institute of
+                                    Engineering and Technology (VSIET)</strong>, we offer a dynamic blend of technical
+                                and managerial programs designed to shape industry-ready professionals.</p>
+                            <p class="about__right--content--description"> Our curriculum is crafted to meet the
+                                evolving demands of the global market, combining academic excellence with practical
+                                application.</p>
+                            <div class="about__right--content--vision">
+                                <div class="mision">
+                                    <div class="mision__icon">
+                                        <img src="assets/images/icon/mission.svg" alt="">
+                                    </div>
+                                    <a href="btech">
+                                        <div class="mision__title">
+                                            B.Tech
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="vision">
+                                    <div class="vision__icon">
+                                        <img src="assets/images/icon/vission.svg" alt="">
+                                    </div>
+                                    <a href="mba-program">
+                                        <div class="vision__title">
+                                            MBA
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <a href="betch" class="rts-theme-btn btn-arrow">Apply Now
+                                <span><i class="fa-regular fa-arrow-right"></i></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- about us end -->
+        <!-- fun fact -->
+
+        <section style="background-color: #fff; padding: 10px 0 20px 0; margin-bottom: 50px;" id="education-placement">
+            <div class="elementor-widget-container">
+                <div class="container">
+                    <div class="row align-items-center justify-content-center">
+                        <div class="col-lg-12" style="margin-bottom: 30px;">
+                            <div class="section-heading center-heading one">
+                                <h2 class="rts__section--title text-capitalize" style=" text-align: center; ">Experience
+                                    Quality Education <span class="text-theme-colored2"
+                                        style="transition: none; text-align: center; line-height: 70px; border-width: 0px; margin: 0px; padding: 0px; letter-spacing: 0px; font-weight: 800; color: #890C25;">
+                                        @VSIET</span></h2>
+
+                                <p class="rts__section--description">At VSIET, education goes beyond textbooks—it's
+                                    about shaping leaders and innovators. With world-class infrastructure, esteemed
+                                    faculty, and a global outlook, VSIET empowers you to lead the change in the
+                                    engineering world. This is where your journey to excellence begins.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--  <div class="rts-funfact v__2">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-12 ">
+                    <div class="rts-funfact-wrapper">
+                        <div class="single-cta-item">
+                            <h2 class="single-cta-item__title">200+</h2>
+                            <p>Universities</p>
+                        </div>
+                        <div class="single-cta-item">
+                            <h2 class="single-cta-item__title">156</h2>
+                            <p>institution </p>
+                        </div>
+                         <div class="single-cta-item">
+                            <h2 class="single-cta-item__title">98</h2>
+                            <p>Programmes</p>
+                        </div>
+                        <div class="single-cta-item">
+                            <h2 class="single-cta-item__title">850+</h2>
+                            <p>Organizations</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+ -->
+
+
+            <!-- achievement-section Start-->
+            <div class="achievement-section">
+                <!-- <h2 class="achievement-title">Our Impact</h2> -->
+                <div class="achievement-container">
+                    <div class="achievement-item">
+                        <div class="counter1" data-target="100">100%</div>
+                        <h4 class="counter-title">Placement Assurance</h4>
+                        <!-- <p class="counter-desc">Medically rehabilitated children with special needs</p> -->
+                    </div>
+                    <div class="achievement-item">
+                        <div class="counter1" data-target="500">5LPA+</div>
+                        <h4 class="counter-title">POA (Placement Opportunity Assurance)</h4>
+
+                    </div>
+                    <div class="achievement-item">
+                        <!-- <div class="counter" data-target="0">100K</div> -->
+                        <div class="counter1">100%</div>
+
+                        <h4 class="counter-title">Ph.D. Faculty</h4>
+
+                    </div>
+                    <!--    <div class="achievement-item">
+            <div class="counter" data-target="200">200</div>
+            <h4 class="counter-title">Advocacy Initiatives</h4>
+            <p class="counter-desc">Empowering the Disability Ecosystem</p>
+         </div> -->
+                    <!--   <div class="achievement-item">
+            <div class="counter" data-target="1010">1010</div>
+            <h4 class="counter-title">IDEA</h4>
+            <p class="counter-desc">Collaborations with NGOs across India</p>
+         </div> -->
+                    <div class="achievement-item">
+                        <div class="counter1" data-target="16">500+</div>
+                        <h4 class="counter-title">Company Partnerships for Placement</h4>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- achievement-section end-->
+
+
+        <!-- partial:index.partial.html -->
+        <style>
+            @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+            @import url("https://fonts.googleapis.com/css2?family=Courgette&family=Noto+Serif+Vithkuqi:wght@500&family=Quicksand:wght@300&family=Satisfy&family=Shadows+Into+Light&display=swap");
+            @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&display=swap");
+            @import url("https://fonts.googleapis.com/css2?family=Chonburi&display=swap");
+
+
+            ul {
+                margin: 0;
+                padding: 0;
+                list-style: none;
+            }
+
+            .carding {
+                position: relative;
+                width: calc(min(89rem, 90%));
+                margin: 0 auto;
+                min-height: 100vh;
+                column-gap: 3rem;
+                padding-block: min(20vh, 3rem);
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+
+            .carding .name {
+                letter-spacing: 0.8px;
+                font-weight: 700;
+                font-size: 2.6rem;
+                line-height: 1.2;
+            }
+
+            /* .carding p {
+                font-size: 0.9rem;
+                max-width: 680px;
+                line-height: 1.6;
+                margin-inline: auto;
+                margin-top: 10px;
+            } */
+
+            .swiper-container {
+                position: relative;
+            }
+
+            .swiper {
+                width: 100%;
+                padding: 80px 0 95px 0;
+            }
+
+            .swiper-slide {
+                width: 10rem;
+                height: 22rem;
+                display: flex;
+                flex-direction: column;
+                align-items: self-start;
+                position: relative;
+                border-radius: 12px;
+                box-shadow: -1px 5px 15px #0000001f;
+            }
+
+            .swiper-slide h3 {
+                color: #fff;
+                font-size: 2.5rem;
+                line-height: 1.4;
+                margin-bottom: 0.625rem;
+                letter-spacing: 0.8px;
+                position: relative;
+            }
+
+            .swiper-slide p {
+                /* color: #fff;
+                line-height: 1.6;
+                font-size: 0.8rem; */
+            }
+
+            .swiper-slide .slide-content {
+                position: absolute;
+                top: 45%;
+                left: 50%;
+                transform: translate(-50%, -45%);
+                width: 90%;
+            }
+
+            .swiper-slide .author {
+                grid-template-columns: 1fr;
+                justify-items: center;
+                position: absolute;
+                bottom: -90px;
+                width: 100%;
+                display: none;
+                opacity: 0;
+            }
+
+            .swiper-slide .author span {
+                color: #111;
+                display: block;
+                margin: 5px 0 10px 0;
+                font-weight: 600;
+                font-size: 0.9rem;
+            }
+
+            .swiper-slide .author img {
+                width: 60px;
+                height: 60px;
+                object-fit: cover;
+                border-radius: 50%;
+                border: 3.5px solid white;
+            }
+
+            .swiper-slide .author ul {
+                display: flex;
+                align-items: center;
+            }
+
+            .swiper-slide .author ul li svg {
+                width: 20px;
+                color: orange;
+            }
+
+            .swiper-slide-active .author {
+                display: grid;
+                opacity: 1;
+            }
+
+
+            .swiper-slide--one h3 {
+                font-family: "Cormorant Garamond", serif;
+                font-weight: 600;
+            }
+
+
+            .swiper-slide--two h3 {
+                font-family: "Quicksand", sans-serif;
+            }
+
+
+            .swiper-slide--three h3 {
+                font-family: "Satisfy", cursive;
+                font-weight: 300;
+            }
+
+
+            .swiper-slide--four h3 {
+                font-family: "Courgette", cursive;
+                font-weight: 300;
+            }
+
+
+            .swiper-slide--five h3 {
+                font-family: "Noto Serif Vithkuqi", serif;
+                font-weight: 300;
+            }
+
+
+            .swiper-slide--six h3 {
+                font-family: "Chonburi", cursive;
+                font-weight: 400;
+            }
+
+            .swiper-button-prev {
+                background: white;
+                border-radius: 50%;
+                top: 47%;
+                left: -30px;
+                width: 50px;
+                height: 50px;
+                box-shadow: 0px 2px 11px rgba(0, 0, 0, 0.17);
+            }
+
+            .swiper-button-prev::after {
+                font-size: 1.4rem;
+                content: "";
+            }
+
+            .swiper-button-prev svg {
+                width: 25px;
+            }
+
+            .swiper-button-next {
+                background: white;
+                border-radius: 50%;
+                top: 47%;
+                right: -30px;
+                width: 50px;
+                height: 50px;
+                box-shadow: 0px 2px 11px rgba(0, 0, 0, 0.17);
+            }
+
+            .swiper-button-next::after {
+                font-size: 1.4rem;
+                content: "";
+            }
+
+            .swiper-button-next svg {
+                width: 25px;
+            }
+
+            .swiper-button-prev,
+            .swiper-button-next {
+                display: none;
+            }
+
+            @media (min-width: 760px) {
+
+                .swiper-button-prev,
+                .swiper-button-next {
+                    display: flex;
+                }
+            }
+        </style>
+        <section class="awrds">
+        <section class="carding">
+            <div class="elementor-widget-container container">
+                <div class="row align-items-center justify-content-center">
+                    <div class="col-lg-12" style="margin-bottom: 30px;">
+                        <div class="section-heading center-heading one">
+                            <h2 class="rts__section--title text-capitalize" style=" text-align: center; ">Aawards &
+                                <span class="text-theme-colored2"
+                                    style="transition: none; text-align: center; line-height: 70px; border-width: 0px; margin: 0px; padding: 0px; letter-spacing: 0px; font-weight: 800; color: #890C25; ">
+                                    Recognition</span>
+                            </h2>
+                            <p class="rts__section--description" style="color: white;">VSIET has received multiple awards & accolades from
+                                prestigious rating agencies & media surveys from time to time for their all-arounder
+                                excellence in Academics, Placements, Infrastructure, Skill Development & Strong Industry
+                                Interface & training.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-container">
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="slide-content">
+                                <div class="full1">
+                                    <div class="back">
+                                        <div class="gaping">
+                                            <img src="assets/images/author/3.jpg" alt="">
+                                        </div>
+                                    </div>
+                                    <div id="boxe"></div>
+                                    <div class="textunderimg">
+                                        <h2 class="name">Best Institute with Industry Linkages <i>by Icon Award</i></h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="slide-content">
+                                <div class="full1">
+                                    <div class="back">
+                                        <div class="gaping">
+                                            <img src="assets/images/author/7.jpg" alt="">
+                                        </div>
+                                    </div>
+                                    <div id="boxe"></div>
+                                    <div class="textunderimg">
+                                        <h2 class="name">Most Preferred Institute of India <i>by Integrated
+                                                achievers.</i></h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="slide-content">
+                                <div class="full1">
+                                    <div class="back">
+                                        <div class="gaping">
+                                            <img src="assets/images/author/9.jpg" alt="">
+                                        </div>
+                                    </div>
+                                    <div id="boxe"></div>
+                                    <div class="textunderimg">
+                                        <h2 class="name">Best Educator in India <i>by International Education
+                                                excellence.</i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="slide-content">
+                                <div class="full1">
+                                    <div class="back">
+                                        <div class="gaping">
+                                            <img src="assets/images/author/10.jpg" alt="">
+                                        </div>
+                                    </div>
+                                    <div id="boxe"></div>
+                                    <div class="textunderimg">
+                                        <h2 class="name">Best Private Institute of India<br><i>by Global Leadership
+                                                awards</i>
+                                        </h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="slide-content">
+                                <div class="full1">
+                                    <div class="back">
+                                        <div class="gaping">
+                                            <img src="assets/images/author/11.jpg" alt="">
+                                        </div>
+                                    </div>
+                                    <div id="boxe"></div>
+                                    <div class="textunderimg">
+                                        <h2 class="name">Most Promising Institute in India <i>by International business
+                                                awards</i></h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="slide-content">
+                                <div class="full1">
+                                    <div class="back">
+                                        <div class="gaping">
+                                            <img src="assets/images/author/12.jpg" alt="">
+                                        </div>
+                                    </div>
+                                    <div id="boxe"></div>
+                                    <div class="textunderimg">
+                                        <h2 class="name">Asia’s Best Institute <i>by Global Excellence life style</i>
+                                        </h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M19.5 12h-15m0 0l6.75 6.75M4.5 12l6.75-6.75" />
+                    </svg>
+
+                </div>
+                <div class="swiper-button-next">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
+                    </svg>
+
+                </div>
+            </div>
+
+        </section>
+        </section>
+        <!-- partial -->
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.js'></script>
+
+        <script>
+
+            /*
+inspiration
+https://cz.pinterest.com/pin/830703093790696716/
+*/
+
+            var swiper = new Swiper(".swiper", {
+                effect: "coverflow",
+                grabCursor: true,
+                centeredSlides: true,
+                coverflowEffect: {
+                    rotate: 0,
+                    stretch: 0,
+                    depth: 100,
+                    modifier: 4,
+                    slideShadows: true
+                },
+                loop: true,
+                // Navigation arrows
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev"
+                },
+                keyboard: {
+                    enabled: true
+                },
+                //   mousewheel: {
+                //     thresholdDelta: 70
+                //   },
+                breakpoints: {
+                    560: {
+                        slidesPerView: 2.5
+                    },
+                    768: {
+                        slidesPerView: 3
+                    },
+                    1024: {
+                        slidesPerView: 3
+                    }
+                }
+            });
+        </script>
+
+        <!--awards end-->
+
+        <!-- academic program -->
+        <section class="program rts-section-padding" style="background-color: #fff;" id="education-academics">
+            <div class="container">
+                <div class="row rt-center">
+                    <div class="col-sm-12">
+                        <div class="rts__section--wrapper v__5">
+                            <h2 class="rts__section--title text-capitalize" style="text-align: center; ">Academics &
+                                <span class="text-theme-colored2"
+                                    style="transition: none; text-align: center; line-height: 70px; border-width: 0px; margin: 0px; padding: 0px; letter-spacing: 0px; font-weight: 800; color: #890C25;">
+                                    Program</span>
+                            </h2>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-md-center g-0">
+                    <div class="col-lg-4 col-md-10">
+                        <div class="program__single--item">
+                            <div class="program__single--item--bg">
+                                <img src="assets/images/program/program__bg01.jpg" alt="">
+                            </div>
+                            <h5 class="program__single--item--title">B.Tech</h5>
+
+                            <ul class="program__single--item--list">
+                                <li class="program__single--item--list--item">
+                                    <a href="betch" class="link__list">Computer Science & Engineering
+                                        <!--<span><i class="fa-regular fa-arrow-right"></i></span>-->
+                                    </a>
+                                </li>
+                                <li class="program__single--item--list--item">
+                                    <a href="betch" class="link__list">Computer Science & Engineering(AI)
+                                        <!--<span><i class="fa-regular fa-arrow-right"></i></span>-->
+                                    </a>
+                                </li>
+                                <li class="program__single--item--list--item">
+                                    <a href="betch" class="link__list">Electronics & Communication Engg.
+                                        <!--<span><i class="fa-regular fa-arrow-right"></i></span>-->
+                                    </a>
+                                </li>
+                                <li class="program__single--item--list--item">
+                                    <a href="betch" class="link__list">Electrical Engineering
+                                        <!--<span><i class="fa-regular fa-arrow-right"></i></span>-->
+                                    </a>
+                                </li>
+                                <li class="program__single--item--list--item">
+                                    <a href="betch" class="link__list">Information Technology
+                                        <!--<span><i class="fa-regular fa-arrow-right"></i></span>-->
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-10">
+                        <div class="program__single--item v__2">
+                            <div class="program__single--item--bg">
+                                <img src="assets/images/program/program__bg02.jpg" alt="">
+                            </div>
+                            <h5 class="program__single--item--title">MBA</h5>
+
+                            <ul class="program__single--item--list">
+                                <li class="program__single--item--list--item">
+                                    <a href="mba-program" class="link__list">Human Resource(HR)
+                                        <!--<span><i class="fa-regular fa-arrow-right"></i></span>-->
+                                    </a>
+                                </li>
+                                <li class="program__single--item--list--item">
+                                    <a href="mba-program" class="link__list">Marketing(MK)
+                                        <!--<span><i class="fa-regular fa-arrow-right"></i></span>-->
+                                    </a>
+                                </li>
+                                <li class="program__single--item--list--item">
+                                    <a href="mba-program" class="link__list">Finance(FM)
+
+                                    </a>
+                                </li>
+                                <li class="program__single--item--list--item">
+                                    <a href="mba-program" class="link__list">International Business(IB)
+
+                                    </a>
+                                </li>
+                                <li class="program__single--item--list--item">
+                                    <a href="mba-program" class="link__list">Information Technology (IT)
+
+                                    </a>
+                                </li>
+                                <li class="program__single--item--list--item">
+                                    <a href="mba-program" class="link__list">Operation Management (OM)
+
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-10">
+                        <div class="program__single--item">
+                            <div class="program__single--item--bg">
+                                <img src="assets/images/program/program__bg01.jpg" alt="">
+                            </div>
+                            <h5 class="program__single--item--title">Pedagogy</h5>
+
+                            <ul class="program__single--item--list">
+                                <li class="program__single--item--list--item">
+                                    <a href="pedagogy" class="link__list">Experiential Learning
+                                        <!--<span><i class="fa-regular fa-arrow-right"></i></span>-->
+                                    </a>
+                                </li>
+                                <li class="program__single--item--list--item">
+                                    <a href="pedagogy" class="link__list">Blended Learning
+                                        <!--<span><i class="fa-regular fa-arrow-right"></i></span>-->
+                                    </a>
+                                </li>
+                                <li class="program__single--item--list--item">
+                                    <a href="pedagogy" class="link__list">Industry-Driven Curriculum
+                                        <!--<span><i class="fa-regular fa-arrow-right"></i></span>-->
+                                    </a>
+                                </li>
+                                <li class="program__single--item--list--item">
+                                    <a href="pedagogy" class="link__list">Student-Centric Approach
+                                        <!--<span><i class="fa-regular fa-arrow-right"></i></span>-->
+                                    </a>
+                                </li>
+
+                                <li class="program__single--item--list--item">
+                                    <a href="pedagogy" class="link__list">Outcome-Based Education
+                                        <!--<span><i class="fa-regular fa-arrow-right"></i></span>-->
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- academic program end -->
+
+        <style>
+            .log {
+                border-radius: 8px;
+                border: 2px dashed #890c25;
+                padding: 15px;
+                margin: 6px;
+                height: 135px;
+            }
+        </style>
+        <!-- brand slider -->
+        <div class="rts-brand v_1 rts-section-padding rts__light">
+            <div class="container">
+                <div class="row rt-center">
+                    <div class="col-sm-12">
+                        <div class="rts__section--wrapper v__5">
+                            <h2 class="rts__section--title text-capitalize" style="text-align: center; ">Our Top <span
+                                    class="text-theme-colored2"
+                                    style="transition: none; text-align: center; line-height: 70px; border-width: 0px; margin: 0px; padding: 0px; letter-spacing: 0px; font-weight: 800; color: #890C25;">
+                                    Recruiters</span></h2>
+
+                        </div>
+                    </div>
+                </div>
+                <style>
+                    <style>.snake-slider {
+                        overflow: hidden;
+                        width: 100%;
+                        /* background: #000; */
+                        padding: 20px 0;
+                    }
+
+                    .logo-track {
+                        display: flex;
+                        gap: 40px;
+                        width: max-content;
+                        animation: scrollLeft 20s linear infinite;
+                    }
+
+                    .logo {
+                        animation: wave 2s ease-in-out infinite;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+
+                    .logo img {
+                        width: 150px;
+                        height: auto;
+                        transition: transform 0.3s ease;
+                    }
+
+                    .logo:nth-child(odd) {
+                        animation-delay: 0s;
+                    }
+
+                    .logo:nth-child(even) {
+                        animation-delay: 1s;
+                    }
+
+                    /* Horizontal sliding */
+                    @keyframes scrollLeft {
+                        0% {
+                            transform: translateX(0%);
+                        }
+
+                        100% {
+                            transform: translateX(-50%);
+                        }
+                    }
+
+                    /* Wavy vertical snake movement */
+                    @keyframes wave {
+
+                        0%,
+                        100% {
+                            transform: translateY(0px);
+                        }
+
+                        25% {
+                            transform: translateY(-10px);
+                        }
+
+                        50% {
+                            transform: translateY(0px);
+                        }
+
+                        75% {
+                            transform: translateY(10px);
+                        }
+                    }
+                </style>
+                </style>
+                <div class="snake-slider">
+                    <div class="logo-track">
+                        <div class="logo"><img src="assets/images/home_logo/10.png" alt="Logo 1"></div>
+                        <div class="logo"><img src="assets/images/home_logo/11.png" alt="Logo 2"></div>
+                        <div class="logo"><img src="assets/images/home_logo/12.png" alt="Logo 3"></div>
+                        <div class="logo"><img src="assets/images/home_logo/13.png" alt="Logo 4"></div>
+                        <div class="logo"><img src="assets/images/home_logo/14.png" alt="Logo 5"></div>
+                        <div class="logo"><img src="assets/images/home_logo/15.png" alt="Logo 5"></div>
+                        <div class="logo"><img src="assets/images/home_logo/16.png" alt="Logo 5"></div>
+                        <div class="logo"><img src="assets/images/home_logo/7.png" alt="Logo 5"></div>
+                        <div class="logo"><img src="assets/images/home_logo/8.png" alt="Logo 5"></div>
+                        <div class="logo"><img src="assets/images/home_logo/9.png" alt="Logo 5"></div>
+
+                        <!-- Repeat for loop -->
+                        <div class="logo"><img src="assets/images/home_logo/10.png" alt="Logo 1"></div>
+                        <div class="logo"><img src="assets/images/home_logo/11.png" alt="Logo 2"></div>
+                        <div class="logo"><img src="assets/images/home_logo/12.png" alt="Logo 3"></div>
+                        <div class="logo"><img src="assets/images/home_logo/13.png" alt="Logo 4"></div>
+                        <div class="logo"><img src="assets/images/home_logo/14.png" alt="Logo 5"></div>
+                        <div class="logo"><img src="assets/images/home_logo/15.png" alt="Logo 5"></div>
+                        <div class="logo"><img src="assets/images/home_logo/16.png" alt="Logo 5"></div>
+                        <div class="logo"><img src="assets/images/home_logo/7.png" alt="Logo 5"></div>
+                        <div class="logo"><img src="assets/images/home_logo/8.png" alt="Logo 5"></div>
+                        <div class="logo"><img src="assets/images/home_logo/9.png" alt="Logo 5"></div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <!-- brand slider end -->
+
+
+
+
+
+        <style type="text/css">
+            .rts__single--testimonial {
+                padding: 20px 20px 20px 20px;
+                background: var(--rt-white);
+            }
+
+            .mar {
+                margin-bottom: 0px;
+            }
+        </style>
+        <!-- student feedback -->
+        <section class="feedback rts-section-padding" id="education-faculty">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="rts__section--wrapper v__9">
+                            <h2 class="rts__section--title text-capitalize" style="text-align: center; ">Our <span
+                                    class="text-theme-colored2"
+                                    style="transition: none; text-align: center; line-height: 70px; border-width: 0px; margin: 0px; padding: 0px; letter-spacing: 0px; font-weight: 800; color: #890C25;">
+                                    Faculty</span></h2>
+                            <p class="rts__section--description">Our distinguished faculty comprises academic leaders
+                                and industry veterans from premier institutions such as IIT Delhi, IIM Ahmedabad, IIM
+                                Lucknow, MIT Boston, NIT, XIMB, XLRI, and Symbiosis. With extensive experience in
+                                renowned global firms, they foster a dynamic and robust learning environment that
+                                inspires ambition, drives innovation, and cultivates excellence.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- feedback slider -->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="rts__testimonial--active swiper swiper-data" data-swiper='{
+                        "slidesPerView":4,
+                        "slidesToShow": 4,
+                        "loop": false,
+                        "speed": 1000,
+                        "pagination":{
+                            "el":".rts__pagination",
+                            "clickable": true
+                        },
+                        "autoplay":{
+                            "delay":"7000"
+                        },
+                        "breakpoints":{
+                            "0":{
+                                "slidesPerView": 1
+                            },
+                            "520":{
+                                "slidesPerView": 2
+                            },
+                            "950":{
+                                "slidesPerView": 3
+                            },
+                            "1200":{
+                                "slidesPerView": 4
+                            }
+                                                       
+                        }
+                    }'>
+
+
+                            <div class="swiper-wrapper">
+
+                                <!-- single slide -->
+                                <div class="swiper-slide">
+                                    <div class="rts__single--testimonial">
+                                        <div class="rts__research--single">
+                                            <div class="rts__research--single--thumb"><a href="faculty"><img
+                                                        src="assets/images/faculty/001.jpg" alt="faculty"></a>
+                                            </div>
+                                            <div class="rts__research--single--meta"><a
+                                                    class="rts__research--single--meta--title" href="faculty">Dr. P.
+                                                    Sivakumar</a>
+                                                <p class="rts__research--single--meta--excerpt mar">Director,</p>
+                                                <p class="rts__research--single--meta--excerpt">Ph.D. in Human
+                                                    Resources<br>&nbsp;</p>
+                                                <p style="text-align: right; font-size: 12px;"><a href="faculty"
+                                                        class="rts-nbg-btn btn-arrow">Read Faculty Details <span><i
+                                                                class="fa-sharp fa-regular fa-arrow-right  "></i></span></a>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- single slide end -->
+
+                                <!-- single slide -->
+                                <div class="swiper-slide">
+                                    <div class="rts__single--testimonial">
+                                        <div class="rts__research--single">
+                                            <div class="rts__research--single--thumb"><a href="faculty"><img
+                                                        src="assets/images/faculty/002.jpg" alt="faculty"></a>
+                                            </div>
+                                            <div class="rts__research--single--meta"><a
+                                                    class="rts__research--single--meta--title" href="faculty">Dr. V.
+                                                    Vijayalalitha</a>
+                                                <p class="rts__research--single--meta--excerpt mar">Dean,</p>
+                                                <p class="rts__research--single--meta--excerpt">Ph.D. (Mgmt.), M.Phil.,
+                                                    M.Sc (Mathematics), PGDCA</p>
+                                                <p style="text-align: right; font-size: 12px;"><a href="faculty"
+                                                        class="rts-nbg-btn btn-arrow">Read Faculty Details <span><i
+                                                                class="fa-sharp fa-regular fa-arrow-right  "></i></span></a>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- single slide end -->
+                                <!-- single slide -->
+                                <div class="swiper-slide">
+                                    <div class="rts__single--testimonial">
+                                        <div class="rts__research--single">
+                                            <div class="rts__research--single--thumb"><a href="faculty"><img
+                                                        src="assets/images/faculty/003.jpg" alt="faculty"></a>
+                                            </div>
+                                            <div class="rts__research--single--meta"><a
+                                                    class="rts__research--single--meta--title" href="faculty">Prof.
+                                                    Hitesh Manocha</a>
+                                                <p class="rts__research--single--meta--excerpt mar">Professor,</p>
+                                                <p class="rts__research--single--meta--excerpt">IIM Ahmedabad,
+                                                    PGDM<br>&nbsp;</p>
+                                                <p style="text-align: right; font-size: 12px;"><a href="faculty"
+                                                        class="rts-nbg-btn btn-arrow">Read Faculty Details <span><i
+                                                                class="fa-sharp fa-regular fa-arrow-right  "></i></span></a>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- single slide end -->
+
+                                <!-- single slide -->
+                                <div class="swiper-slide">
+                                    <div class="rts__single--testimonial">
+                                        <div class="rts__research--single">
+                                            <div class="rts__research--single--thumb"><a href="faculty"><img
+                                                        src="assets/images/faculty/004.jpg" alt="faculty"></a>
+                                            </div>
+                                            <div class="rts__research--single--meta"><a
+                                                    class="rts__research--single--meta--title" href="faculty">Prof.
+                                                    Shailaja Manocha </a>
+                                                <p class="rts__research--single--meta--excerpt mar">Professor,</p>
+                                                <p class="rts__research--single--meta--excerpt">PGDBM, B.Sc<br>&nbsp;
+                                                </p>
+                                                <p style="text-align: right; font-size: 12px;"><a href="faculty"
+                                                        class="rts-nbg-btn btn-arrow">Read Faculty Details <span><i
+                                                                class="fa-sharp fa-regular fa-arrow-right  "></i></span></a>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- single slide end -->
+
+                                <!-- single slide -->
+                                <!--<div class="swiper-slide">-->
+                                <!--    <div class="rts__single--testimonial">-->
+                                <!--        <div class="rts__research--single">-->
+                                <!--            <div class="rts__research--single--thumb"><a href="faculty"><img src="assets/images/faculty/005.jpg" alt="faculty"></a>-->
+                                <!--            </div>-->
+                                <!--            <div class="rts__research--single--meta"><a class="rts__research--single--meta--title" href="faculty">Dr. Surender Komera</a>-->
+                                <!--                <p class="rts__research--single--meta--excerpt mar">Associate Professor,</p>-->
+                                <!--                <p class="rts__research--single--meta--excerpt">Ph.D., Corporate Finance<br>&nbsp;</p>-->
+                                <!--                <p style="text-align: right; font-size: 12px;"><a href="faculty" class="rts-nbg-btn btn-arrow">Read Faculty Details <span><i class="fa-sharp fa-regular fa-arrow-right  "></i></span></a></p>-->
+                                <!--            </div>-->
+                                <!--        </div>-->
+                                <!--    </div>-->
+                                <!--</div>-->
+                                <!-- single slide end -->
+                                <!-- single slide -->
+                                <div class="swiper-slide">
+                                    <div class="rts__single--testimonial">
+                                        <div class="rts__research--single">
+                                            <div class="rts__research--single--thumb"><a href="faculty"><img
+                                                        src="assets/images/faculty/006.jpg" alt="faculty"></a>
+                                            </div>
+                                            <div class="rts__research--single--meta"><a
+                                                    class="rts__research--single--meta--title" href="faculty">Ms.
+                                                    Nimisha Srivastava</a>
+                                                <p class="rts__research--single--meta--excerpt mar">Professor,</p>
+                                                <p class="rts__research--single--meta--excerpt">Ph.D pursuing, UGC NET
+                                                    Qualified, MBA (Marketing & HR)</p>
+                                                <p style="text-align: right; font-size: 12px;"><a href="faculty"
+                                                        class="rts-nbg-btn btn-arrow">Read Faculty Details <span><i
+                                                                class="fa-sharp fa-regular fa-arrow-right  "></i></span></a>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- single slide end -->
+                                <!-- single slide -->
+                                <div class="swiper-slide">
+                                    <div class="rts__single--testimonial">
+                                        <div class="rts__research--single">
+                                            <div class="rts__research--single--thumb"><a href="faculty"><img
+                                                        src="assets/images/faculty/007.jpg" alt="faculty"></a>
+                                            </div>
+                                            <div class="rts__research--single--meta"><a
+                                                    class="rts__research--single--meta--title" href="faculty">Capt.
+                                                    Sanjeev Rishi </a>
+                                                <p class="rts__research--single--meta--excerpt mar">Professor in
+                                                    Practice,</p>
+                                                <p class="rts__research--single--meta--excerpt">Master's certificate of
+                                                    competency by MOS</p>
+                                                <p style="text-align: right; font-size: 12px;"><a href="faculty"
+                                                        class="rts-nbg-btn btn-arrow">Read Faculty Details <span><i
+                                                                class="fa-sharp fa-regular fa-arrow-right  "></i></span></a>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- single slide end -->
+
+                                <!-- single slide -->
+                                <div class="swiper-slide">
+                                    <div class="rts__single--testimonial">
+                                        <div class="rts__research--single">
+                                            <div class="rts__research--single--thumb"><a href="faculty"><img
+                                                        src="assets/images/faculty/008.jpg" alt="faculty"></a>
+                                            </div>
+                                            <div class="rts__research--single--meta"><a
+                                                    class="rts__research--single--meta--title" href="faculty">Mr. Gourav
+                                                    Maharishi </a>
+                                                <p class="rts__research--single--meta--excerpt mar">Assistant Professor,
+                                                </p>
+                                                <p class="rts__research--single--meta--excerpt">PGDM<br>&nbsp;</p>
+                                                <p style="text-align: right; font-size: 12px;"><a href="faculty"
+                                                        class="rts-nbg-btn btn-arrow">Read Faculty Details <span><i
+                                                                class="fa-sharp fa-regular fa-arrow-right  "></i></span></a>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- single slide end -->
+
+                                <!-- single slide -->
+                                <div class="swiper-slide">
+                                    <div class="rts__single--testimonial">
+                                        <div class="rts__research--single">
+                                            <div class="rts__research--single--thumb"><a href="faculty"><img
+                                                        src="assets/images/faculty/009.jpg" alt="faculty"></a>
+                                            </div>
+                                            <div class="rts__research--single--meta"><a
+                                                    class="rts__research--single--meta--title" href="faculty">Mr.
+                                                    Himanshu Arora</a>
+                                                <p class="rts__research--single--meta--excerpt mar">Assistant Professor,
+                                                </p>
+                                                <p class="rts__research--single--meta--excerpt"> FOREX Derivatives,
+                                                    Excel, (MF)</p>
+                                                <p style="text-align: right; font-size: 12px;"><a href="faculty"
+                                                        class="rts-nbg-btn btn-arrow">Read Faculty Details <span><i
+                                                                class="fa-sharp fa-regular fa-arrow-right  "></i></span></a>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- single slide end -->
+
+                            </div>
+
+                            <div class="rts__pagination v__1"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- student feedback end -->
+        <style type="text/css">
+            .rts__single--testimonial0 {
+                background: none !important;
+            }
+
+            .rts__pagination.v__1_1 {
+                margin: 0px 0 !important;
+            }
+        </style>
+        <!-- campus life -->
+        <section class="campus rts__primary__bg-2 rts-section-padding" id="campus_life">
+            <div class="container">
+                <div class="row">
+                    <div class="rts__section--wrapper v__6">
+                        <p class="rts__section--wrapper--description">
+                            Campus life at VSIET is filled with enriching experiences, from cultural festivals and tech
+                            events to clubs, competitions, and student-led initiatives—encouraging holistic development.
+                        </p>
+                        <h2 class="rts__section--wrapper--title">
+                            Campus <span> Life</span>
+                        </h2>
+                    </div>
+                </div>
+
+
+                <!-- feedback slider -->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="rts__testimonial--active swiper swiper-data" data-swiper='{
+                        "slidesPerView":4,
+                        "slidesToShow": 4,
+                        "loop": true,
+                        "speed": 3000,
+                        "pagination":{
+                            "el":".rts__pagination",
+                            "clickable": true
+                        },
+                        "autoplay":{
+                            "delay":"2000"
+                        },
+                        "breakpoints":{
+                            "320":{
+                                "slidesPerView": 1
+                            },
+                            "575":{
+                                "slidesPerView": 1.5
+                            },
+                            "768":{
+                                "slidesPerView": 2
+                            },
+                            "991":{
+                                "slidesPerView": 2.2
+                            },
+                            "1201":{
+                                "slidesPerView": 3
+                            }
+                           
+                        }
+                    }'>
+
+                            <div class="swiper-wrapper">
+                                <!-- single slide -->
+                                <div class="swiper-slide">
+                                    <div class="rts__single--testimonial rts__single--testimonial0">
+                                        <div class="rts__research--single campus__single--item">
+                                            <div class="campus__single--item--thumb">
+                                                <img src="assets/images/campus/life_03.jpg" alt="">
+                                            </div>
+                                            <div class="rts__research--single--meta">
+                                                <h5 class="campus__single--item--title"><a href="events"
+                                                        class="rts__research--single--meta--title">Student Life <span><i
+                                                                class="fa-light fa-arrow-right"></i></span></a></h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- single slide end -->
+
+                                <!-- single slide -->
+                                <div class="swiper-slide">
+                                    <div class="rts__single--testimonial rts__single--testimonial0">
+                                        <div class="rts__research--single campus__single--item">
+                                            <div class="campus__single--item--thumb">
+                                                <img src="assets/images/campus/life_02.jpg" alt="">
+                                            </div>
+                                            <div class="rts__research--single--meta">
+                                                <h5 class="campus__single--item--title"><a href="clubs"
+                                                        class="rts__research--single--meta--title">Arts & Culture
+                                                        <span><i class="fa-light fa-arrow-right"></i></span></a></h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- single slide end -->
+
+                                <!-- single slide -->
+                                <div class="swiper-slide">
+                                    <div class="rts__single--testimonial rts__single--testimonial0">
+                                        <div class="rts__research--single campus__single--item">
+                                            <div class="campus__single--item--thumb">
+                                                <img src="assets/images/campus/life_01.jpg" alt="">
+                                            </div>
+                                            <div class="rts__research--single--meta">
+                                                <h5 class="campus__single--item--title"><a href="health"
+                                                        class="rts__research--single--meta--title">Recreation & Wellness
+                                                        <span><i class="fa-light fa-arrow-right"></i></span></a></h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- single slide end -->
+
+                                <!-- single slide -->
+                                <div class="swiper-slide">
+                                    <div class="rts__single--testimonial rts__single--testimonial0">
+                                        <div class="rts__research--single campus__single--item">
+                                            <div class="campus__single--item--thumb ">
+                                                <img src="assets/images/campus/life_04.jpg" alt="">
+                                            </div>
+                                            <div class="rts__research--single--meta">
+                                                <h5 class="campus__single--item--title"><a href="sport"
+                                                        class="rts__research--single--meta--title">Sports <span><i
+                                                                class="fa-light fa-arrow-right"></i></span></a></h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- single slide end -->
+
+                            </div>
+                            <!-- <div class="rts__pagination v__1 rts__pagination.v__1_1"></div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- shape area -->
+            <div class="rts__shape">
+                <img src="assets/images/icon/note_khata.svg" class="rts__shape--1" alt="">
+                <img src="assets/images/icon/book.svg" class="rts__shape--2" alt="">
+                <img src="assets/images/icon/compas_scale.svg" class="rts__shape--3" alt="">
+            </div>
+        </section>
+        <!-- campus life end -->
+
+
+
+
+        <section class="rts-campus-tour rts-section-padding" id="education-infra">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <!--<h2 class="section-title rt-center mb--50">Our Campus Tour</h2>-->
+                    <h2 class="rts__section--title text-capitalize mb--40" style="text-align: center; ">Our <span
+                            class="text-theme-colored2"
+                            style="transition: none; text-align: center; line-height: 70px; border-width: 0px; margin: 0px; padding: 0px; letter-spacing: 0px; font-weight: 800; color: #890C25;">
+                            Campus Tour</span></h2>
+                    <div class="col-12">
+                        <div class="rts-video-section height-500 mb--30">
+                            <a href="https://www.youtube.com/watch?v=Uwq1uiuM_9w"
+                                class="rts-video-section-player popup-video video-btn">
+                                <i class="fa-sharp fa-solid fa-play"></i>
+                            </a>
+                            <img src="assets/images/about/video_thumb_01.jpg" alt="video-bg">
+                        </div>
+                    </div>
+                    <div class="col-lg-9">
+                        <div class="rts-video-section-text rt-center mx-3">
+                            <p>Explore the vibrant and futuristic VSIET campus—where innovation meets excellence. Our
+                                guided tour showcases state-of-the-art infrastructure, advanced labs, smart classrooms,
+                                and collaborative learning spaces. Engage with faculty, observe student projects, and
+                                witness how VSIET builds tomorrow’s leaders.</p>
+                            <!--<a href="campus-life.html" class="mt--15 about-btn rts-nbg-btn btn-arrow">Visit Campus <span><i class="fa-sharp fa-regular fa-arrow-right"></i></span></a>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+        <!-- scholarship appication -->
+        <section class="rts-scholarship rts-scholarship-bg rts-section-height">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="rts-scholarship-info">
+                            <h2 class="rts__section--title text-capitalize" style="text-align: center; color: #fff;">
+                                Scholarships & <span class="text-theme-colored2"
+                                    style="transition: none; text-align: center; line-height: 70px; border-width: 0px; margin: 0px; padding: 0px; letter-spacing: 0px; font-weight: 800; color: #fff;">
+                                    Financial Aid</span></h2>
+
+                            <p class="w-740 mb--50">VSIET proudly supports talented students through generous
+                                scholarships and financial aid programs. Each year, the institute rewards academic merit
+                                and talent, ensuring that financial constraints do not hinder access to quality
+                                education.</p>
+                            <a href="fee-scholarships" class="rts-theme-btn btn-arrow">Apply Now<span><i
+                                        class="fa-thin fa-arrow-right"></i></span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- scholarship appication end -->
+
+        <style type="text/css">
+            .rts-footer-widget h6 {
+                /* text-decoration: underline; */
+                color: #b71a34;
+                margin-bottom: 24px;
+            }
+
+            .un {
+                display: inline-block;
+            }
+
+            .un:after {
+                content: '';
+                width: 0px;
+                height: 2px;
+                display: block;
+                background: #fff;
+                padding-top: 1px;
+                transition: 300ms;
+            }
+
+            .un:hover:after {
+                width: 100%;
+        </style>
+
+
+
+
+
+
+
+
+        <!-- student feedback -->
+        <section class="rts__section rts-section-padding rts__primary__bg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="rts__section--wrapper v__4">
+                            <h2 class="rts__section--title">Corporate Testimonials</h2>
+                            <p class="rts__section--description">Your opinion matters, and by providing feedback, you
+                                contribute to the continuous enhancement of our academic programs, support services, and
+                                campus life</p>
+                            <div class="rts__slider--arrow">
+                                <div class="rts__prev slider__btn"><i class="fa-light fa-arrow-left"></i></div>
+                                <div class="rts__next slider__btn"><i class="fa-light fa-arrow-right"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- student feedback testimonial -->
+                    <div class="col-lg-8">
+                        <div class="rts__testimonial--active swiper swiper-data" data-swiper='{
+                        "slidesPerView":2,
+                        "loop": true,
+                        "speed": 1000,
+                        "navigation":{
+                            "nextEl":".rts__next",
+                            "prevEl":".rts__prev"
+                        },
+                        "autoplay":{
+                            "delay":"7000"
+                        },
+"breakpoints":{
+                            "320":{
+                                "slidesPerView": 1
+                            },
+                            "575":{
+                                "slidesPerView": 1.5
+                            },
+                            "768":{
+                                "slidesPerView": 2
+                            },
+                            "991":{
+                                "slidesPerView": 2
+                            },
+                            "1201":{
+                                "slidesPerView": 2
+                            }
+                        }
+                    }'>
+                            <div class="swiper-wrapper">
+                                <!-- single slide -->
+                                <div class="swiper-slide">
+                                    <div class="rts__single--testimonial">
+                                        <div class="rts__rating--star">
+                                            <i class="fa-sharp fa-solid fa-star"></i>
+                                            <i class="fa-sharp fa-solid fa-star"></i>
+                                            <i class="fa-sharp fa-solid fa-star"></i>
+                                            <i class="fa-sharp fa-solid fa-star"></i>
+                                            <i class="fa-sharp fa-light fa-star"></i>
+                                        </div>
+                                        <p class="rts__single--testimonial--text">
+                                            I can't recommend The Gourmet Haven enough. It's a place for special date in
+                                            nights, or whenever you're in the mood for a culinary.
+                                        </p>
+                                        <div class="rts__single--testimonial--author">
+                                            <div class="rts__single--testimonial--author--meta">
+                                                <div class="rts__author--img">
+                                                    <img src="assets/images/testimonial/author-1.png" alt="author">
+                                                </div>
+                                                <div class="rts__author--info">
+                                                    <h5 class="mb-0">Emma Elizabeth</h5>
+                                                    <span class="designation">Assistant Teacher</span>
+                                                </div>
+                                            </div>
+                                            <div class="rts__single--testimonial--quote">
+                                                <img src="assets/images/testimonial/quote.svg" alt="quote">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- single slide end -->
+                                <!-- single slide -->
+                                <div class="swiper-slide">
+                                    <div class="rts__single--testimonial">
+                                        <div class="rts__rating--star">
+                                            <i class="fa-sharp fa-solid fa-star"></i>
+                                            <i class="fa-sharp fa-solid fa-star"></i>
+                                            <i class="fa-sharp fa-solid fa-star"></i>
+                                            <i class="fa-sharp fa-solid fa-star"></i>
+                                            <i class="fa-sharp fa-light fa-star"></i>
+                                        </div>
+                                        <p class="rts__single--testimonial--text">
+                                            I can't recommend The Gourmet Haven enough. It's a place for special date in
+                                            nights, or whenever you're in the mood for a culinary.
+                                        </p>
+                                        <div class="rts__single--testimonial--author">
+                                            <div class="rts__single--testimonial--author--meta">
+                                                <div class="rts__author--img">
+                                                    <img src="assets/images/testimonial/author-1.png" alt="author">
+                                                </div>
+                                                <div class="rts__author--info">
+                                                    <h5 class="mb-0">Emma Elizabeth</h5>
+                                                    <span class="designation">Assistant Teacher</span>
+                                                </div>
+                                            </div>
+                                            <div class="rts__single--testimonial--quote">
+                                                <img src="assets/images/testimonial/quote.svg" alt="quote">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- single slide end -->
+                                <!-- single slide -->
+                                <div class="swiper-slide">
+                                    <div class="rts__single--testimonial">
+                                        <div class="rts__rating--star">
+                                            <i class="fa-sharp fa-solid fa-star"></i>
+                                            <i class="fa-sharp fa-solid fa-star"></i>
+                                            <i class="fa-sharp fa-solid fa-star"></i>
+                                            <i class="fa-sharp fa-solid fa-star"></i>
+                                            <i class="fa-sharp fa-light fa-star"></i>
+                                        </div>
+                                        <p class="rts__single--testimonial--text">
+                                            I can't recommend The Gourmet Haven enough. It's a place for special date in
+                                            nights, or whenever you're in the mood for a culinary.
+                                        </p>
+                                        <div class="rts__single--testimonial--author">
+                                            <div class="rts__single--testimonial--author--meta">
+                                                <div class="rts__author--img">
+                                                    <img src="assets/images/testimonial/author-1.png" alt="author">
+                                                </div>
+                                                <div class="rts__author--info">
+                                                    <h5 class="mb-0">Emma Elizabeth</h5>
+                                                    <span class="designation">Assistant Teacher</span>
+                                                </div>
+                                            </div>
+                                            <div class="rts__single--testimonial--quote">
+                                                <img src="assets/images/testimonial/quote.svg" alt="quote">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- single slide end -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- student feedback end -->
+
+        <!-- notice board start -->
+        <section class="rts-notice rts-section-padding rts-section-padding">
+            <div class="container">
+                <div class="row gy-5 gy-lg-0 justify-content-md-center">
+                    <div class="col-md-11 col-lg-7">
+                        <div class="rts-event-section">
+                            <h4 class="rts-section-title mb--25">Upcomming Event</h4>
+                            <div class="rts-event-section-content">
+                                <ul class="list-unstyled rts-counter">
+                                    <li class="single-event">
+                                        <div class="single-event-counter">
+                                            <div class=""><img
+                                                    src="https://vocationalservices.in/vsiet_web/assets/images/campus/01.jpg"
+                                                    style="width: 100px; height: 100px;"> </div>
+                                        </div>
+                                        <div class="single-event-content">
+                                            <h5 class="event-title">Diversity, Equity, and Inclusion</h5>
+                                            <div class="single-event-content-meta">
+                                                <div class="event-date">
+                                                    <span><i class="fal fa-calendar"></i></span>
+                                                    <span>November 28, 2023</span>
+                                                </div>
+                                                <div class="event-time">
+                                                    <span><i class="fa-sharp fa-thin fa-clock"></i></span>
+                                                    <span>10:30 am</span>
+                                                </div>
+                                                <div class="event-place">
+                                                    <span><i class="fa-sharp fa-thin fa-location-dot"></i></span>
+                                                    <span>Yarra Park, UK</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="single-event">
+                                        <div class="single-event-counter">
+                                            <div class=""><img
+                                                    src="https://vocationalservices.in/vsiet_web/assets/images/campus/01.jpg"
+                                                    style="width: 100px; height: 100px;"></div>
+                                        </div>
+                                        <div class="single-event-content">
+                                            <h5 class="event-title">Talking Money With Kids and Teens</h5>
+                                            <div class="single-event-content-meta">
+                                                <div class="event-date">
+                                                    <span><i class="fal fa-calendar"></i></span>
+                                                    <span>November 28, 2023</span>
+                                                </div>
+                                                <div class="event-time">
+                                                    <span><i class="fa-sharp fa-thin fa-clock"></i></span>
+                                                    <span>10:30 am</span>
+                                                </div>
+                                                <div class="event-place">
+                                                    <span><i class="fa-sharp fa-thin fa-location-dot"></i></span>
+                                                    <span>Yarra Park, UK</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="single-event">
+                                        <div class="single-event-counter">
+                                            <div class=""><img
+                                                    src="https://vocationalservices.in/vsiet_web/assets/images/campus/01.jpg"
+                                                    style="width: 100px; height: 100px;"></div>
+                                        </div>
+                                        <div class="single-event-content">
+                                            <h5 class="event-title">Planning for College After Affirmative Action</h5>
+                                            <div class="single-event-content-meta">
+                                                <div class="event-date">
+                                                    <span><i class="fal fa-calendar"></i></span>
+                                                    <span>November 28, 2023</span>
+                                                </div>
+                                                <div class="event-time">
+                                                    <span><i class="fa-sharp fa-thin fa-clock"></i></span>
+                                                    <span>10:30 am</span>
+                                                </div>
+                                                <div class="event-place">
+                                                    <span><i class="fa-sharp fa-thin fa-location-dot"></i></span>
+                                                    <span>Yarra Park, UK</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-11 col-lg-5">
+                        <div class="rts-notice-section ">
+                            <div class="rts-section rt-between pb--25 rts-border-bottom-2">
+                                <h4 class="rts-section-title">Notice</h4>
+                                <a href="#" class="rts-arrow">View All <span><i
+                                            class="fa-sharp fa-regular fa-arrow-right"></i></span></a>
+                            </div>
+                            <div class="rts-tab">
+                                <ul class="nav nav-pills pb--30" id="pills-tab" role="tablist">
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill"
+                                            data-bs-target="#pills-home" type="button" role="tab"
+                                            aria-controls="pills-home" aria-selected="true">Latest</button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill"
+                                            data-bs-target="#pills-profile" type="button" role="tab"
+                                            aria-controls="pills-profile" aria-selected="false">Exam</button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill"
+                                            data-bs-target="#pills-contact" type="button" role="tab"
+                                            aria-controls="pills-contact" aria-selected="false">Admission</button>
+                                    </li>
+                                </ul>
+                                <div class="tab-content" id="pills-tabContent">
+                                    <div class="tab-pane fade show active" id="pills-home" role="tabpanel"
+                                        aria-labelledby="pills-home-tab" tabindex="0">
+                                        <ul class="list-unstyled notice-content-box">
+                                            <li class="single-notice">
+                                                <div class="single-notice-item">
+                                                    <div class="notice-date">
+                                                        20
+                                                        <span>Jan</span>
+                                                    </div>
+                                                    <div class="notice-content">
+                                                        <p>
+                                                            <a href="#">
+                                                                Notice Regarding Upcoming Campus Event: Spring Fling
+                                                                Carnival.
+                                                            </a>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="single-notice">
+                                                <div class="single-notice-item">
+                                                    <div class="notice-date">
+                                                        22
+                                                        <span>Jan</span>
+                                                    </div>
+                                                    <div class="notice-content">
+                                                        <p>
+                                                            <a href="#">
+                                                                Important Notice: Changes to Examination Schedule for
+                                                                Fall Semester 2024.
+                                                            </a>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="single-notice">
+                                                <div class="single-notice-item">
+                                                    <div class="notice-date">
+                                                        24
+                                                        <span>Jan</span>
+                                                    </div>
+                                                    <div class="notice-content">
+                                                        <p>
+                                                            <a href="#">
+                                                                Notice Regarding Deadline Extension for Assignment
+                                                                Submission in Biology 101.
+                                                            </a>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="single-notice">
+                                                <div class="single-notice-item">
+                                                    <div class="notice-date">
+                                                        25
+                                                        <span>Jan</span>
+                                                    </div>
+                                                    <div class="notice-content">
+                                                        <p>
+                                                            <a href="#">
+                                                                Urgent Notice: Campus Maintenance Work Scheduled for
+                                                                March 5th-7th.
+                                                            </a>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="single-notice">
+                                                <div class="single-notice-item">
+                                                    <div class="notice-date">
+                                                        25
+                                                        <span>Jan</span>
+                                                    </div>
+                                                    <div class="notice-content">
+                                                        <p>
+                                                            <a href="#">
+                                                                Notice of Guest Lecture: Dr. John Smith on Neuroscience
+                                                                Advances.
+                                                            </a>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+
+                                    <div class="tab-pane fade" id="pills-profile" role="tabpanel"
+                                        aria-labelledby="pills-profile-tab" tabindex="0">
+                                        <ul class="list-unstyled notice-content-box">
+                                            <li class="single-notice">
+                                                <div class="single-notice-item">
+                                                    <div class="notice-date">
+                                                        20
+                                                        <span>Jan</span>
+                                                    </div>
+                                                    <div class="notice-content">
+                                                        <p>
+                                                            <a href="#">
+                                                                Important Notice: Midterm Examination Schedule for
+                                                                Spring Semester 2024.
+                                                            </a>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="single-notice">
+                                                <div class="single-notice-item">
+                                                    <div class="notice-date">
+                                                        21
+                                                        <span>Jan</span>
+                                                    </div>
+                                                    <div class="notice-content">
+                                                        <p>
+                                                            <a href="#">
+                                                                Notice Regarding Final Examination Timetable for Fall
+                                                                Semester 2023
+                                                            </a>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="single-notice">
+                                                <div class="single-notice-item">
+                                                    <div class="notice-date">
+                                                        22
+                                                        <span>Jan</span>
+                                                    </div>
+                                                    <div class="notice-content">
+                                                        <p>
+                                                            <a href="#">
+                                                                Urgent Notice: Changes to Exam Dates for Biology 10
+                                                            </a>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="single-notice">
+                                                <div class="single-notice-item">
+                                                    <div class="notice-date">
+                                                        23
+                                                        <span>Jan</span>
+                                                    </div>
+                                                    <div class="notice-content">
+                                                        <p>
+                                                            <a href="#">
+                                                                Notice of Exam Venue Change for Chemistry 201
+                                                            </a>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="single-notice">
+                                                <div class="single-notice-item">
+                                                    <div class="notice-date">
+                                                        25
+                                                        <span>Jan</span>
+                                                    </div>
+                                                    <div class="notice-content">
+                                                        <p>
+                                                            <a href="#">
+                                                                Reminder Notice: Registration Deadline for Winter Term
+                                                                Examinations
+                                                            </a>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="tab-pane fade" id="pills-contact" role="tabpanel"
+                                        aria-labelledby="pills-contact-tab" tabindex="0">
+                                        <ul class="list-unstyled notice-content-box">
+                                            <li class="single-notice">
+                                                <div class="single-notice-item">
+                                                    <div class="notice-date">
+                                                        26
+                                                        <span>Jan</span>
+                                                    </div>
+                                                    <div class="notice-content">
+                                                        <p>
+                                                            <a href="#">
+                                                                Admission Notice: Applications Now Open for Fall 2024
+                                                                Intake
+                                                            </a>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="single-notice">
+                                                <div class="single-notice-item">
+                                                    <div class="notice-date">
+                                                        27
+                                                        <span>Jan</span>
+                                                    </div>
+                                                    <div class="notice-content">
+                                                        <p>
+                                                            <a href="#">
+                                                                Important Notice: Admission Criteria and Requirements
+                                                                for Undergraduate Programs
+                                                            </a>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="single-notice">
+                                                <div class="single-notice-item">
+                                                    <div class="notice-date">
+                                                        28
+                                                        <span>Jan</span>
+                                                    </div>
+                                                    <div class="notice-content">
+                                                        <p>
+                                                            <a href="#">
+                                                                Urgent Admission Notice: Extended Deadline for
+                                                                Submission of Applications
+                                                            </a>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="single-notice">
+                                                <div class="single-notice-item">
+                                                    <div class="notice-date">
+                                                        29
+                                                        <span>Jan</span>
+                                                    </div>
+                                                    <div class="notice-content">
+                                                        <p>
+                                                            <a href="#">
+                                                                Notice of Scholarship Opportunities for Incoming
+                                                                Freshmen
+                                                            </a>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="single-notice">
+                                                <div class="single-notice-item">
+                                                    <div class="notice-date">
+                                                        30
+                                                        <span>Jan</span>
+                                                    </div>
+                                                    <div class="notice-content">
+                                                        <p>
+                                                            <a href="#">
+                                                                Admission Notice: Information Session for Prospective
+                                                                Students on 2024
+                                                            </a>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- notice board end -->
+
+
+
+
+        <p>&nbsp;</p>
+
+        <style>
+            .social1 {
+                position: fixed;
+                top: 33%;
+                z-index: 999999;
+                right: -65px;
+                transform: rotate(270deg);
+            }
+
+
+            .social1 a.btn-new-m {
+                /*position: fixed;*/
+
+                /*z-index: 9999;*/
+                width: 196px;
+                padding: 10px;
+                text-align: center;
+                color: #fff !important;
+                background-color: #890C25;
+                /*top: 30%;*/
+                height: 44px;
+
+                /*text-transform: uppercase;*/
+
+                font-weight: 500;
+                box-shadow: -6px -6px 7px 1px #00000038;
+                border-radius: 8px;
+            }
+
+            @media only screen and (max-width: 767px) {
+                .fixed-bottom-bar {
+                    position: fixed;
+                    bottom: 0;
+                    right: 0;
+                    padding: 10px;
+                    width: 100%;
+                    background-color: #890C25;
+                    height: 44px;
+                    font-weight: 500;
+                    box-shadow: -6px -6px 7px 1px #00000038;
+                    text-align: center;
+                    z-index: 9999999;
+                    color: #fff !important;
+                }
+
+                .social1 {
+                    display: none;
+                }
+
+            }
+
+
+
+
+            #__eechatIcon {
+                right: 64px !important
+            }
+
+
+            a {
+                color: white;
+                text-decoration: none;
+            }
+
+            .social {
+                position: fixed;
+                top: 190px;
+                z-index: 9;
+                width: 10px;
+            }
+
+
+
+            .social ul {
+                padding: 0px;
+                transform: translate(-270px, 0);
+            }
+
+            .social ul li {
+                display: block;
+                margin: 5px;
+                background: #890C25;
+                color: #fff;
+                width: 304px;
+                text-align: right;
+                padding: 5px;
+                border-radius: 0 30px 30px 0;
+                transition: all 1.5s;
+            }
+
+            .social ul li:hover {
+                transform: translate(110px, 0);
+                background: #c44a73;
+                transition: all 1.5s;
+            }
+
+            .social ul li:hover a {
+                color: white;
+            }
+
+            .social ul li:hover i {
+                color: #c44a73;
+                background: white;
+                transform: rotate(360deg);
+                transition: all 1.5s;
+            }
+
+            .social ul li i {
+                margin-left: 10px;
+                color: #890C25;
+                background: white;
+                padding: 6px;
+                border-radius: 50%;
+                width: 30px;
+                height: 30px;
+                transform: rotate(0deg);
+                text-align: center;
+                font-size: 20px;
+            }
+
+            @media (max-width: 900.98px) {
+
+
+                .social {
+                    display: none;
+                }
+
+                /*.social1 {*/
+                /*    position: fixed;*/
+                /*    top: 140px;*/
+                /*    z-index: 999999;*/
+                /*}*/
+            }
+
+            .call-buton .cc-calto-action-ripple {
+                z-index: 99999;
+                position: fixed;
+                right: 1%;
+                bottom: 15%;
+                background: #890C25;
+                width: 4rem;
+                height: 4rem;
+                padding: 1rem;
+                border-radius: 100%;
+                -webkit-box-sizing: border-box;
+                box-sizing: border-box;
+                color: #ffffff;
+                -webkit-animation: cc-calto-action-ripple 0.6s linear infinite;
+                animation: cc-calto-action-ripple 0.6s linear infinite;
+                display: -webkit-box;
+                display: -webkit-flex;
+                display: -ms-flexbox;
+                display: flex;
+                justify-items: center;
+                -webkit-box-align: center;
+                -webkit-align-items: center;
+                -ms-flex-align: center;
+                align-items: center;
+                text-decoration: none;
+            }
+
+            .call-buton .cc-calto-action-ripple i {
+                -webkit-transition: 0.3s ease;
+                transition: 0.3s ease;
+                font-size: 2.2rem;
+            }
+
+            .call-buton .cc-calto-action-ripple:hover i {
+                -webkit-transform: rotate(135deg);
+                transform: rotate(135deg);
+            }
+
+            @-webkit-keyframes cc-calto-action-ripple {
+                0% {
+                    -webkit-box-shadow: 0 4px 10px rgba(137, 12, 37, 0.2), 0 0 0 0 rgba(137, 12, 37, 0.2), 0 0 0 5px rgba(137, 12, 37, 0.2), 0 0 0 10px rgba(137, 12, 37, 0.2);
+                    box-shadow: 0 4px 10px rgba(137, 12, 37, 0.2), 0 0 0 0 rgba(137, 12, 37, 0.2), 0 0 0 5px rgba(137, 12, 37, 0.2), 0 0 0 10px rgba(137, 12, 37, 0.2);
+                }
+
+                100% {
+                    -webkit-box-shadow: 0 4px 10px rgba(137, 12, 37, 0.2), 0 0 0 5px rgba(137, 12, 37, 0.2), 0 0 0 10px rgba(137, 12, 37, 0.2), 0 0 0 20px rgba(137, 12, 37, 0);
+                    box-shadow: 0 4px 10px rgba(137, 12, 37, 0.2), 0 0 0 5px rgba(137, 12, 37, 0.2), 0 0 0 10px rgba(137, 12, 37, 0.2), 0 0 0 20px rgba(137, 12, 37, 0);
+                }
+            }
+
+            @keyframes cc-calto-action-ripple {
+                0% {
+                    -webkit-box-shadow: 0 4px 10px rgba(137, 12, 37, 0.2), 0 0 0 0 rgba(137, 12, 37, 0.2), 0 0 0 5px rgba(137, 12, 37, 0.2), 0 0 0 10px rgba(137, 12, 37, 0.2);
+                    box-shadow: 0 4px 10px rgba(137, 12, 37, 0.2), 0 0 0 0 rgba(137, 12, 37, 0.2), 0 0 0 5px rgba(137, 12, 37, 0.2), 0 0 0 10px rgba(137, 12, 37, 0.2);
+                }
+
+                100% {
+                    -webkit-box-shadow: 0 4px 10px rgba(137, 12, 37, 0.2), 0 0 0 5px rgba(137, 12, 37, 0.2), 0 0 0 10px rgba(137, 12, 37, 0.2), 0 0 0 20px rgba(137, 12, 37, 0);
+                    box-shadow: 0 4px 10px rgba(137, 12, 37, 0.2), 0 0 0 5px rgba(137, 12, 37, 0.2), 0 0 0 10px rgba(137, 12, 37, 0.2), 0 0 0 20px rgba(137, 12, 37, 0);
+                }
+            }
+
+            span.num {
+                position: absolute;
+                color: #ec8b00;
+                left: -30%;
+                bottom: -50%;
+            }
+
+            @media only screen and (max-width: 767px) {
+
+                .call-buton .cc-calto-action-ripple {
+                    z-index: 99999;
+                    position: fixed;
+                    right: 2%;
+                    bottom: 10%;
+                    background: #890C25;
+                    width: 4rem;
+                    height: 4rem;
+                    padding: 1rem;
+                    border-radius: 100%;
+                    -webkit-box-sizing: border-box;
+                    box-sizing: border-box;
+                    color: #ffffff;
+                    -webkit-animation: cc-calto-action-ripple 0.6s linear infinite;
+                    animation: cc-calto-action-ripple 0.6s linear infinite;
+                    display: -webkit-box;
+                    display: -webkit-flex;
+                    display: -ms-flexbox;
+                    display: flex;
+                    justify-items: center;
+                    -webkit-box-align: center;
+                    -webkit-align-items: center;
+                    -ms-flex-align: center;
+                    align-items: center;
+                    text-decoration: none;
+                }
+            }
+        </style>
+
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/brands.min.js"
+            integrity="sha512-ILOQokRQNF0S8SKV6fnaLNj02CmZnDWmYUr3zlH4jwToep0lWc7twuTzF+Mm0cKPdszi0xe8KymVi2y7mAweVQ=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <nav class="social">
+            <ul>
+                <li><a href="#">Facebook <i class="fa fa-facebook"></i></a></li>
+                <li><a href="#">Linkdien <i class="fa fa-linkedin"></i></a></li>
+                <li><a href="#">Twitter <i class="fa-brands fa-x-twitter"></i></a></li>
+                <li><a href="#">Instagram <i class="fa fa-instagram"></i></a></li>
+                <li><a href="#">Youtube <i class="fa fa-youtube"></i></a></li>
+                <!--<li><a href="#">Youtube <i class="fa-brands fa-x-twitter"></i></a></li>-->
+
+            </ul>
+        </nav>
+
+
+        <div class="social1">
+            <a href="https://apply.gnimgreaternoida.in/" target="_blank" class="btn-new-m"><span
+                    class="blink_me"><!-- <i class="fa fa-phone-square"></i> Font Awesome fontawesome.com --> Admission
+                    Enquiry</span></a>
+
+        </div>
+
+        <!--<a href="tel:+912071177104" class="qcontact-link chat "><img class="img-fluid" alt="Call" src="https://mitwpu.edu.in/assets/frontend/images/call-icon.svg"><span>+91 2071177104</span></a>-->
+        <!-- <a href="https://api.whatsapp.com/send?phone=919881492848" target="_blank" class="qcontact-link whatsapp "><img class="img-fluid" alt="WhatsApp" src="https://mitwpu.edu.in/assets/frontend/images/whatusp-icon.svg"><span>+91 9911089108</span></a> -->
+        <!--<a href="#" target="_blank" class="qcontact-link brochurefile ">-->
+        <!--   <img class="img-fluid" alt="Download" src="https://mitwpu.edu.in/assets/frontend/images/download-pdf-icon.svg" style="width:22px;margin-right:2px;"><span style="padding-left:4px;font-size:1.5rem;">Download Brochure&nbsp;</span>-->
+        <!--</a> -->
+        <style>
+            /* fixed social*/
+            #fixed-social {
+                position: fixed;
+                top: 60%;
+                right: 0;
+                z-index: 9999;
+            }
+
+            #fixed-social a {
+                color: #fff;
+                display: block;
+                height: 40px;
+                position: relative;
+                text-align: center;
+                line-height: 40px;
+                width: 40px;
+                margin-bottom: 1px;
+                z-index: 2;
+            }
+
+            #fixed-social a:hover>span {
+                visibility: visible;
+                right: 41px;
+                opacity: 1;
+            }
+
+            #fixed-social a span {
+                line-height: 40px;
+                right: 60px;
+                position: absolute;
+                text-align: center;
+                width: 120px;
+                visibility: hidden;
+                transition-duration: 0.5s;
+                z-index: 1;
+                opacity: 0;
+            }
+
+            .fixed-facebook {
+                background-color: #09A24F;
+                border-radius: 5px;
+            }
+
+            .fixed-facebook span {
+                background-color: #09A24F;
+            }
+
+            .fixed-twitter {
+                background-color: #7D3895;
+
+            }
+
+            .fixed-twitter span {
+                background-color: #7D3895;
+            }
+
+            .fixed-gplus {
+                background-color: #00AF54;
+
+            }
+
+            .fixed-gplus span {
+                background-color: #00AF54;
+            }
+
+            .fixed-linkedin {
+                background-color: #FFC41E;
+
+            }
+
+            .fixed-linkedin span {
+                background-color: #FFC41E;
+            }
+
+            .fixed-instagrem {
+                background-color: #ED2B29;
+
+            }
+
+            .fixed-instagrem span {
+                background-color: #890C25;
+            }
+
+            .fixed-tumblr {
+                background-color: #890C25;
+                border-radius: 5px;
+
+            }
+
+            .fixed-tumblr span {
+                background-color: #890C25;
+            }
+
+            .wh_b {
+                font-size: 35px;
+                padding: 3px;
+            }
+
+            /*end fixed social*/
+        </style>
+        <div id="fixed-social">
+            <div>
+                <a href="https://api.whatsapp.com/send?phone=919311857965" target="_blank" class="fixed-facebook"
+                    target="_blank"><i class="fa-brands fa-whatsapp wh_b"></i> <span>whatsapp</span></a>
+            </div>
+            <!--<div>-->
+            <!--  <a href="#" class="fixed-twitter" target="_blank"><i class="fa fa-twitter"></i> <span>Twitter</span></a>-->
+            <!--</div>-->
+            <!--<div>-->
+            <!--  <a href="#" class="fixed-gplus" target="_blank"><i class="fa fa-google"></i> <span>Google+</span></a>-->
+            <!--</div>-->
+            <!--<div>-->
+            <!--  <a href="#" class="fixed-linkedin" target="_blank"><i class="fa fa-linkedin"></i> <span>LinkedIn</span></a>-->
+            <!--</div>-->
+            <!--<div>-->
+            <!--  <a href="#" class="fixed-instagrem" target="_blank"><i class="fa fa-instagram"></i> <span>Instagram</span></a>-->
+            <!--</div>-->
+            <!--<div>-->
+            <a href="#" class="fixed-tumblr" target="_blank"><i class="fa fa-file-text wh_b"></i>
+                <span>Brochure</span></a>
+        </div>
+        </div>
+        <!-- partial -->
+
+        <section class="call-buton"><a class="cc-calto-action-ripple" href="tel:9999999"><i class="fa fa-phone"></i></a>
+        </section>
+        <a href="#">
+            <div class="container-fuild">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="fixed-bottom-bar">
+                                <i class="fa fa-phone-square"></i> Admission Enquiry
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </a>
+
+        <!-- newsletter -->
+        <div class="rts-newsletter v_1 rts-cta-background">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="rts-newsletter-box"
+                            style="background-image: url(assets/images/newsletter/bg-5.jpg);">
+                            <div class="rts-newsletter-box-content">
+                                <h4 class="newsletter-title">We work hard to prepare every student for a successful
+                                    professional life.
+                                </h4>
+                                <div class="newsletter-form w-530">
+                                    <form action="#">
+                                        <!--<input type="email" name="subscription" id="subscription" placeholder="Enter Your mail" required>-->
+                                        <button type="submit" class="rts-nbg-btn btn-arrow" style="transform: rotateY(360deg);">Apply Now <span><i
+                                                    class="fa-sharp fa-regular fa-arrow-right"></i></span></button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- newsletter end -->
+        <style type="text/css">
+            .white {
+                color: #fff !important;
+            }
+
+            .rts-footer-widget h6 {
+                /* text-decoration: underline; */
+                color: #b71a34;
+                margin-bottom: 24px;
+            }
+
+            .un {
+                display: inline-block;
+            }
+
+            .un:after {
+                content: '';
+                width: 0px;
+                height: 2px;
+                display: block;
+                background: #fff;
+                padding-top: 1px;
+                transition: 300ms;
+            }
+
+            .un:hover:after {
+                width: 100%;
+            }
+
+            .social-icons {
+                /*padding:30px;*/
+                /*background-color:#00506b;*/
+                /* text-align: center;*/
+                display: flex;
+            }
+
+            .social-icons a {
+                color: #fff;
+                line-height: 30px;
+                font-size: 24px;
+                margin: 0 5px;
+                text-decoration: none;
+
+            }
+
+            @media only screen and (max-width: 767px) {
+                .social-icons a {
+                    color: #890C25;
+                    line-height: 30px;
+                    font-size: 20px;
+                    margin: 0 5px;
+                    text-decoration: none;
+
+                }
+
+
+            }
+
+            .social-icons a i {
+                line-height: 30px;
+                font-size: 30px;
+                -webkit-transition: all 200ms ease-in;
+                -webkit-transform: scale(1);
+                -ms-transition: all 200ms ease-in;
+                -ms-transform: scale(1);
+                -moz-transition: all 200ms ease-in;
+                -moz-transform: scale(1);
+                transition: all 200ms ease-in;
+                transform: scale(1);
+            }
+
+            .social-icons a:hover i {
+                box-shadow: 0px 0px 150px #000000;
+                z-index: 2;
+                -webkit-transition: all 200ms ease-in;
+                -webkit-transform: scale(1.5);
+                -ms-transition: all 200ms ease-in;
+                -ms-transform: scale(1.5);
+                -moz-transition: all 200ms ease-in;
+                -moz-transform: scale(1.5);
+                transition: all 200ms ease-in;
+                transform: scale(1.5);
+            }
+        </style>
+
+
+
+        <!-- footer start -->
+        <footer class="rts-footer v_2 pt--50 pb--50">
+            <div class="container">
+                <div class="row gy-5 gy-lg-0">
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="rts-footer-widget ">
+                            <!-- <a href="#" class="d-block rts-footer-logo mb--40">
+                            <img src="assets/images/logo/vsit_sq_png.png" alt="VSIET">
+                        </a> -->
+                            <h6 class=" un">Get in touch</h6>
+                            <p style="color: #fff; font-weight:bolder; margin-bottom: 1px;    font-size: 18px;">Vikram
+                                Sarabhai Institute of Engineering & Technology (VSIET)</p>
+                            <!-- <p style="color: #fff;">VSIET stands out as the best engineering college in Greater Noida, shaping the future generation of engineers and innovators and connecting them to the required industry</p> -->
+                            <div class="rts-contact-link" style="color: #fff;">
+                                <a href="https://maps.app.goo.gl/EPYsGHyAQHo81Fwm8" target="_blank"><i
+                                        class="fa-sharp fa-light fa-location-dot"></i> Plot No.- 6B/1, Knowledge Park-2,
+                                    Greater Noida, G.B.Nagar, UP-201306 </a>
+                                <a href="callto:+91-9311857965"><i class="fa-thin fa-phone"></i> +91-9311857965</a>
+
+                                <a href="mailto:info@vsiet.com"><i class="fa-thin fa-envelope"></i> info@vsiet.com</a>
+                                <!-- partial:index.partial.html -->
+                                <div class="social-icons">
+                                    <a href="https://www.facebook.com/vsietgrnoida" target="_blank" title="facebook">
+                                        <i class="fa fa-facebook-square" aria-hidden="true"></i>
+                                    </a>
+                                    <a href="https://x.com/vsiet_grnoida" target="_blank" title="twitter">
+                                        <i class="fa fa-twitter-square" aria-hidden="true"></i>
+                                    </a>
+                                    <a href="#" title="instagram">
+                                        <i class="fa fa-instagram" aria-hidden="true"></i>
+                                    </a>
+                                    <a href="#" title="youtube">
+                                        <i class="fa-brands fa-square-x-twitter" aria-hidden="true"></i>
+                                    </a>
+
+                                    <a href="#" title="pinterest">
+                                        <i class="fa fa-pinterest-square" aria-hidden="true"></i>
+                                    </a>
+
+                                </div>
+                                <!-- partial -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-6 col-sm-6">
+                        <div class="rts-footer-widget ">
+                            <h6 class="un">About</h6>
+                            <div class="rts-footer-menu">
+                                <ul style="color:#fff !important">
+                                    <li style="margin-top: 0px !important; " class="white"><a href="about_us">About
+                                            Us</a></li>
+                                    <li class="white"><a href="about_us">Vision & Mission</a></li>
+                                    <li class="white"><a href="program-overview">Programme Highlights</a></li>
+                                    <li class="white"><a href="faculty">Faculty & Research</a></li>
+
+                                    <li class="white"><a href="assets/files/VSIET_EOA_Report_2025-2026.pdf"
+                                            target="_blank">AICTE Approval</a></li>
+                                    <li class="white"><a href="contact_us">Contact</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-4">
+                        <div class="rts-footer-widget ml--30">
+                            <h6 class="un">Academic</h6>
+                            <div class="rts-footer-menu">
+                                <ul>
+                                    <li style="margin-top: 0px !important; " class="white"><a href="#">Academic Roadmap
+                                        </a></li>
+                                    <li class="white"><a href="pedagogy">Pedagogy</a></li>
+                                    <li class="white"><a href="course-curriculum-btech">Curriculum</a></li>
+                                    <li class="white"><a href="fee-scholarships">Program Fee</a></li>
+                                    <li class="white"><a href="fee-scholarships">Scholarship</a></li>
+                                    <li class="white"><a href="eligibility-admission-process">Admission</a></li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-4">
+                        <div class="rts-footer-widget ml--30">
+                            <h6 class="un">Important Links</h6>
+                            <div class="rts-footer-menu">
+                                <ul>
+                                    <li style="margin-top: 0px !important; " class="white"><a href="#">Accreditations &
+                                            Affiliations </a></li>
+
+                                    <li class="white"><a href="campus">Campus Tour</a></li>
+                                    <li class="white"><a href="faq">FAQ</a></li>
+                                    <li class="white"><a href="#">Downloads</a></li>
+                                    <li class="white"><a href="#">Privacy Policy</a></li>
+                                    <li class="white"><a href="assets/files/VSIET_EOA_Report_2025-2026.pdf"
+                                            target="_blank">EOA Report</a></li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </footer>
+        <div class="rts-footer-copy-right v_1">
+            <div class="container">
+                <div class="row">
+                    <div class="rt-center">
+                        <p class="--p-xs white">Copyright &copy; 2025 All Rights Reserved by <a
+                                href="https://innowebsolution.com/" target="_blank">Innoweb Solutions</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- footer end -->
+        <!-- offcanvase menu -->
+        <!-- header style two -->
+        <div id="side-bar" class="side-bar">
+            <button class="close-icon-menu"><i class="far fa-times"></i></button>
+            <!-- inner menu area desktop start -->
+            <div class="inner-main-wrapper-desk">
+                <div class="thumbnail">
+                    <img src="assets/images/logo/vsit_sq_png.png" alt="VSIET">
+                </div>
+                <div class="inner-content">
+                    <p class="disc">
+                        The Vikram Sarabhai Institute of Engineering & Technology (VSIET) is more than just a college—it
+                        is a transformative educational hub known for innovation, excellence, and impact.
+                    </p>
+                    <!-- offcanvase banner -->
+                    <div class="offcanvase__banner mt--50">
+                        <div class="offcanvase__banner--content">
+                            <img src="assets/images/program/mba_about.jpg" alt="offcanvase">
+                            <a href="#" class="rts-theme-btn">Apply Now</a>
+                        </div>
+                    </div>
+                    <div class="offcanvase__info">
+                        <div class="offcanvase__info--content">
+                            <a href="callto:+91-9311857965"><i class="fa-thin fa-phone"></i> +91-9311857965</a>
+                            <a href="https://maps.app.goo.gl/EPYsGHyAQHo81Fwm8" target="_blank"><i
+                                    class="fa-sharp fa-light fa-location-dot"></i> Plot No.- 6B/1, Knowledge Park-2,
+                                Greater Noida, G.B.Nagar, UP-201306 </a>
+                            <div class="offcanvase__info--content--social">
+                                <p class="title">Follow Us:</p>
+                                <div class="social__links" style="color:#000 !important; ">
+                                    <a href="https://www.facebook.com/vsietgrnoida" target="_blank"><i
+                                            class="fa-brands fa-facebook"></i></a>
+                                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                                    <a href="https://x.com/vsiet_grnoida" target="_blank"><i
+                                            class="fa-brands fa-x-twitter"></i></a>
+                                    <a href="https://www.youtube.com/@vsiet_grnoida" target="_blank"><i
+                                            class="fa-brands fa-youtube"></i></a>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- mobile menu area start -->
+            <!--<div class="mobile-menu-main">-->
+            <!--    <nav class="nav-main mainmenu-nav mt--30">-->
+            <!--        <ul class="mainmenu metismenu" id="mobile-menu-active">-->
+
+            <!--            <li class="has-droupdown">-->
+            <!--                <a href="#" class="main">Home</a>-->
+
+            <!--            </li>-->
+
+            <!--            <li class="has-droupdown">-->
+            <!--                <a href="#" class="main">About Us</a>-->
+            <!--                <ul class="submenu mm-collapse">-->
+            <!--                    <li><a class="mobile-menu-link" href="about.html">About Us</a></li>-->
+            <!--                    <li><a class="mobile-menu-link" href="athletics.html">Athletics</a></li>-->
+            <!--                    <li class="has-dropdown third-lvl">-->
+            <!--                        <a href="javascript:void(0);">Faculty</a>-->
+            <!--                        <ul class="submenu third-lvl base">-->
+            <!--                            <li><a class="mobile-menu-link" href="faculty-sub.html">Faculty</a></li>-->
+            <!--                            <li><a class="mobile-menu-link" href="faculty-sub-details.html">Faculty Details</a></li>-->
+            <!--                            <li><a class="mobile-menu-link" href="faculty.html">Faculty</a></li>-->
+            <!--                            <li><a class="mobile-menu-link" href="faculty-details.html">Faculty Staff details</a></li>-->
+            <!--                        </ul>-->
+            <!--                    </li>-->
+            <!--                    <li><a class="mobile-menu-link" href="research.html">Research</a></li>-->
+            <!--                </ul>-->
+            <!--            </li>-->
+            <!--            <li class="has-droupdown">-->
+            <!--                <a href="#" class="main">Academics</a>-->
+            <!--                <ul class="submenu mm-collapse">-->
+            <!--                    <li><a class="mobile-menu-link" href="academic.html">Academic</a></li>-->
+            <!--                    <li><a class="mobile-menu-link" href="#">Admission</a></li>-->
+            <!--                    <li><a class="mobile-menu-link" href="academic-area.html">Academic Area</a></li>-->
+            <!--                    <li><a class="mobile-menu-link" href="#">Campus Life</a></li>-->
+            <!--                    <li><a class="mobile-menu-link" href="#">Scholarship</a></li>-->
+            <!--                    <li><a class="mobile-menu-link" href="tution-fee.html">Tution Fee</a></li>-->
+            <!--                    <li><a class="mobile-menu-link" href="alumni.html">Alumni</a></li>-->
+            <!--                    <li><a class="mobile-menu-link" href="program-single.html">Program Single</a></li>-->
+            <!--                    <li><a class="mobile-menu-link" href="department-details.html">Department Details</a></li>-->
+            <!--                </ul>-->
+            <!--            </li>-->
+
+            <!--            <li class="has-droupdown">-->
+            <!--                <a href="#" class="main">Admission</a>-->
+            <!--                <ul class="submenu mm-collapse">-->
+            <!--                    <li><a class="mobile-menu-link" href="#">Event</a></li>-->
+            <!--                    <li><a class="mobile-menu-link" href="#">Event Details</a></li>-->
+            <!--                </ul>-->
+            <!--            </li>-->
+            <!--             <li class="has-droupdown">-->
+            <!--                <a href="#" class="main">Placement</a>-->
+            <!--                <ul class="submenu mm-collapse">-->
+            <!--                    <li><a class="mobile-menu-link" href="#">Event</a></li>-->
+            <!--                    <li><a class="mobile-menu-link" href="#">Event Details</a></li>-->
+            <!--                </ul>-->
+            <!--            </li>-->
+            <!--             <li class="has-droupdown">-->
+            <!--                <a href="#" class="main">Infrstructure</a>-->
+            <!--                <ul class="submenu mm-collapse">-->
+            <!--                    <li><a class="mobile-menu-link" href="#">Event</a></li>-->
+            <!--                    <li><a class="mobile-menu-link" href="#">Event Details</a></li>-->
+            <!--                </ul>-->
+            <!--            </li>-->
+            <!--            <li>-->
+            <!--                <a href="contact.html" class="main">Life @VSIET</a>-->
+            <!--            </li>-->
+            <!--            <li>-->
+            <!--                <a href="contact.html" class="main">Contact Us</a>-->
+            <!--            </li>-->
+            <!--        </ul>-->
+            <!--    </nav>-->
+
+            <!--    <div class="offcanvase__info--content mt--30">-->
+            <!--        <a href="callto:+61485826710"><span><i class="fa-sharp fa-light fa-phone"></i></span>+(61) 485-826-710</a>-->
+            <!--        <a href="#"><span><i class="fa-sharp fa-light fa-location-dot"></i></span>Yarra Park, Melbourne, Australia</a>-->
+            <!--        <div class="offcanvase__info--content--social">-->
+            <!--            <p class="title">Follow Us:</p>-->
+            <!--            <div class="social__links">-->
+            <!--                <a href="#"><i class="fa-brands fa-facebook"></i></a>-->
+            <!--                <a href="#"><i class="fa-brands fa-instagram"></i></a>-->
+            <!--                <a href="#"><i class="fa-brands fa-linkedin"></i></a>-->
+            <!--                <a href="#"><i class="fa-brands fa-youtube"></i></a>-->
+            <!--            </div>-->
+            <!--        </div>-->
+            <!--    </div>-->
+            <!--</div>-->
+            <!-- mobile menu area end -->
+        </div>
+        <!-- header style two End -->
+
+        <div class="search-input-area">
+            <div class="container">
+                <div class="search-input-inner">
+                    <div class="input-div">
+                        <input class="search-input autocomplete ui-autocomplete-input" type="text"
+                            placeholder="Search by keyword or #" autocomplete="off">
+                        <button><i class="far fa-search"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div id="close" class="search-close-icon"><i class="far fa-times"></i></div>
+        </div>
+        <!-- rts backto top start -->
+        <div class="progress-wrap">
+            <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+                <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"
+                    style="transition: stroke-dashoffset 10ms linear 0s; stroke-dasharray: 307.919, 307.919; stroke-dashoffset: 307.919;">
+                </path>
+            </svg>
+        </div>
+        <!-- rts back to top end -->
+        <div id="anywhere-home" class="">
+        </div>
+        <!-- scripts -->
+        <!-- jquery js -->
+        <script src="assets/js/vendor/jquery.min.js"></script>
+        <!-- bootstrap 5.0.2 -->
+        <script src="assets/js/plugins/bootstrap.min.js"></script>
+        <!-- jquery ui js -->
+        <script src="assets/js/vendor/jquery-ui.js"></script>
+        <!-- wow js -->
+        <script src="assets/js/vendor/waw.js"></script>
+        <!-- mobile menu -->
+        <script src="assets/js/vendor/metismenu.js"></script>
+        <!-- magnific popup -->
+        <script src="assets/js/vendor/magnifying-popup.js"></script>
+        <!-- swiper JS 10.2.0 -->
+        <script src="assets/js/plugins/swiper.js"></script>
+        <!-- counterup -->
+        <script src="assets/js/plugins/counterup.js"></script>
+        <script src="assets/js/vendor/waypoint.js"></script>
+        <!-- isotop mesonary -->
+        <script src="assets/js/plugins/isotop.js"></script>
+        <script src="assets/js/plugins/imagesloaded.pkgd.min.js"></script>
+        <script src="assets/js/plugins/sticky-sidebar.js"></script>
+        <script src="assets/js/plugins/resize-sensor.js"></script>
+        <script src="assets/js/plugins/twinmax.js"></script>
+        <!-- dymanic Contact Form -->
+        <script src="assets/js/plugins/contact.form.js"></script>
+        <script src="assets/js/plugins/nice-select.min.js"></script>
+        <!-- main Js -->
+        <script src="assets/js/main.js"></script>
+
+    </body>
+
+</html>

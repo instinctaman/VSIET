@@ -11077,13 +11077,11 @@ textarea:-ms-input-placeholder {
     border-radius: 10%;
 }
 #boxe {
-    background-color: #890C25;
+        background-color: #890C25;
+    border-radius: 50% 0 10% 10%;
     top: 0px;
-    position: relative;
+    position: static;
     height: 25px;
-    left: 230px;
-    z-index: 1;
-    width: 35px;
 }
 .textunderimg{
         position: relative;

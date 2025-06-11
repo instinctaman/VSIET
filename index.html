@@ -574,19 +574,22 @@
                             placeholder="Phone Number*" required
                             style="border:none;outline:none;padding-left:0;background:transparent;" />
                     </div>
-                    <select class="reg-select" required>
+                    <label for="state-select" class="visually-hidden">Select State*</label>
+                    <select class="reg-select" id="state-select" required>
                         <option value="" disabled selected>Select State*</option>
                         <option>Delhi</option>
                         <option>Uttar Pradesh</option>
                         <option>Haryana</option>
                     </select>
-                    <select class="reg-select" required>
+                    <label for="city-select" class="visually-hidden">Select City*</label>
+                    <select class="reg-select" id="city-select" required>
                         <option value="" disabled selected>Select City*</option>
                         <option>Ghaziabad</option>
                         <option>Delhi</option>
                         <option>Noida</option>
                     </select>
-                    <select class="reg-select" required>
+                    <label for="course-select" class="visually-hidden">Select Course*</label>
+                    <select class="reg-select" id="course-select" required title="Select Course*">
                         <option value="" disabled selected>Select Course*</option>
                         <option>B.Tech</option>
                         <option>MBA</option>
@@ -594,7 +597,7 @@
                     </select>
                     <div class="reg-checkbox-row">
                         <input type="checkbox" class="reg-checkbox" id="consent" required />
-                        <label for="consent" class="reg-checkbox-label">
+                        <label for="consent">
                             I authorize GN Group of Institutes and its representative to contact me with updates and
                             notifications via Email, SMS, WhatsApp, and Call. This will override the
                             registry&nbsp;on&nbsp;DND/NDNC.*
@@ -1128,7 +1131,7 @@
             }
 
             .cardScroller {
-                height: 580px;
+                height: 600px;
             }
         </style>
         <section class="cardScroller">
@@ -3443,16 +3446,51 @@
             <div id="close" class="search-close-icon"><i class="far fa-times"></i></div>
         </div>
         <!-- rts backto top start -->
-        <div class="progress-wrap">
-            <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
-                <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"
-                    style="transition: stroke-dashoffset 10ms linear 0s; stroke-dasharray: 307.919, 307.919; stroke-dashoffset: 307.919;">
-                </path>
-            </svg>
-        </div>
+         <style>
+            #scrollTopBtn {
+  display: none; /* Hidden by default */
+  position: fixed;
+  bottom: 40px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: #333;
+  color: white;
+  cursor: pointer;
+  padding: 10px 15px;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+#scrollTopBtn:hover {
+  background-color: #555;
+}
+
+         </style>
+        <button onclick="scrollToTop()" id="scrollTopBtn" title="Go to top">↑</button>
+        <script>
+  // Show the button when scrolled down
+  window.onscroll = function () {
+    const btn = document.getElementById("scrollTopBtn");
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+      btn.style.display = "block";
+    } else {
+      btn.style.display = "none";
+    }
+  };
+
+  // Scroll to the top when the button is clicked
+  function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+</script>
+
+
         <!-- rts back to top end -->
-        <div id="anywhere-home" class="">
-        </div>
+        <!-- <div id="anywhere-home" class="">
+        </div> -->
         <!-- scripts -->
         <!-- jquery js -->
         <script src="assets/js/vendor/jquery.min.js"></script>

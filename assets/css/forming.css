@@ -1,0 +1,135 @@
+
+    /* body {
+      background: #fff;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0;
+      font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+    } */
+    @media (min-width:1300px) {
+       .forming{
+            position: relative;
+    top: -660px;
+    z-index: 34;
+    left: 60%;
+    height: 0;
+     }
+    }
+    @media (min-width:1190px) and (max-width:1299px) {
+      .forming {
+        position: relative;
+    top: -600px;
+    z-index: 34;
+    left: 60%;
+    height: 0;
+     }
+      }
+     
+    .reg-box {
+      width: 100%;
+      max-width: 400px;
+      background: #fff;
+      color: #cf3e4e;
+      border-radius: 8px;
+      padding: 24px;
+      box-shadow: 0 2px 12px rgba(88,81,81,0.07);
+      box-sizing: border-box;
+    }
+    .reg-title {
+      text-align: center;
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 1.4;
+      margin-bottom: 12px;
+    }
+    .reg-form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .reg-input, .reg-select {
+      width: 100%;
+      border: 1px solid #d3d4d3;
+      border-radius: 4px;
+      padding: 10px 12px;
+      font-size: 15px;
+      color: #333;
+      background: #fff;
+      box-sizing: border-box;
+    }
+    .reg-label {
+      font-size: 13px;
+      font-weight: 500;
+      margin-bottom: 4px;
+    }
+    .reg-phone-wrapper {
+      display: flex;
+      align-items: center;
+      border: 1px solid #d3d4d3;
+      border-radius: 4px;
+      padding: 10px 12px;
+      background: #fff;
+    }
+    .reg-phone-prefix {
+      margin-right: 6px;
+      color: #333;
+      font-size: 15px;
+      user-select: none;
+    }
+    .reg-checkbox-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 7px;
+      margin-top: 4px;
+    }
+    .reg-checkbox {
+      accent-color: #cf3e4e;
+      margin-top: 1px;
+    }
+    .reg-checkbox-label {
+      font-size: 12px;
+      line-height: 14px;
+      color: #cf3e4e;
+      user-select: none;
+    }
+    .reg-button {
+      margin-top: 8px;
+      background: #cf3e4e;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      padding: 11px 0;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      width: 100%;
+      transition: opacity 0.18s;
+    }
+    .reg-button:hover, .reg-button:active {
+      opacity: 0.82;
+    }
+    .reg-footer-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 18px;
+      font-size: 13px;
+      color: #222;
+    }
+    .reg-login-link {
+      color: #cf3e4e;
+      text-decoration: underline;
+      cursor: pointer;
+      user-select: none;
+    }
+    @media (max-width: 550px) {
+      .reg-box {
+        max-width: 96vw;
+        padding: 12px;
+      }
+      body {
+        padding: 10px 0;
+      }
+    }

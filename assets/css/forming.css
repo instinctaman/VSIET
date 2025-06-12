@@ -31,7 +31,7 @@
       width: 100%;
       max-width: 400px;
       background: #fff;
-      color: #cf3e4e;
+      color: #890C25;;
       border-radius: 8px;
       padding: 24px;
       box-shadow: 0 2px 12px rgba(88,81,81,0.07);
@@ -85,18 +85,18 @@
       margin-top: 4px;
     }
     .reg-checkbox {
-      accent-color: #cf3e4e;
+      accent-color: #890C25;;
       margin-top: 1px;
     }
     .reg-checkbox-label {
       font-size: 12px;
       line-height: 14px;
-      color: #cf3e4e;
+      color: #890C25;;
       user-select: none;
     }
     .reg-button {
       margin-top: 8px;
-      background: #cf3e4e;
+      background: #890C25;;
       color: #fff;
       border: none;
       border-radius: 5px;
@@ -119,7 +119,7 @@
       color: #222;
     }
     .reg-login-link {
-      color: #cf3e4e;
+      color: #890C25;;
       text-decoration: underline;
       cursor: pointer;
       user-select: none;

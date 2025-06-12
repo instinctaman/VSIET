@@ -10194,7 +10194,7 @@ input[type=radio] ~ label {
   cursor: pointer;
 }
 input[type=checkbox] ~ label::before,
-input[type=radio] ~ label::before {
+/* input[type=radio] ~ label::before {
   content: " ";
   position: absolute;
   top: 1 px;
@@ -10205,7 +10205,7 @@ input[type=radio] ~ label::before {
   border-radius: 2px;
   transition: all 0.3s;
   border-radius: 2px;
-}
+} */
 input[type=checkbox] ~ label::after,
 input[type=radio] ~ label::after {
   content: " ";

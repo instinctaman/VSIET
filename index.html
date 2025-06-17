@@ -27,100 +27,62 @@
 
 <body>
     <style>
-        a#followLink {
-            position: absolute;
-            padding: 12px 24px;
-            background: #fff;
-            color: #890C25;
-            border-radius: 30px;
-            transform: translate(-50%, -50%);
-            font-weight: bold;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-            transition: background 0.3s, color 0.3s;
-            text-decoration: none;
-            cursor: pointer;
-            z-index: 9999;
-            pointer-events: auto;
-        }
-
-        a#followLink:hover {
-            background: #890C25;
-            color: #fff;
-        }
-
-        /* Shake Animation */
-        @keyframes shake {
-            0% {
-                transform: translate(-50%, -50%) translate(0px, 0px);
-            }
-
-            25% {
-                transform: translate(-50%, -50%) translate(2px, -2px);
-            }
-
-            50% {
-                transform: translate(-50%, -50%) translate(-2px, 2px);
-            }
-
-            75% {
-                transform: translate(-50%, -50%) translate(2px, 2px);
-            }
-
-            100% {
-                transform: translate(-50%, -50%) translate(0px, 0px);
-            }
-        }
-
+        #followBtn {
+  position: fixed;
+  top: -25px;
+  left: -100px;
+  /* padding: 10px 20px; */
+  z-index: 999;
+  /*pointer-events: none;*/ /* prevents button from blocking clicks */
+  transition: transform 0.1s ease;
+}
         .shake {
             animation: shake 0.3s infinite;
         }
     </style>
-    <a href="https://vocationalservices.in/vsiet_web/eligibility-admission-process" id="followLink">Apply Now</a>
+    <a class="rts-theme-btn btn-arrow" href="https://vocationalservices.in/vsiet_web/eligibility-admission-process" id="followBtn">Apply Now
+        <span><i class="fa-regular fa-arrow-right"></i></span>
+    </a>
 
     <script>
-        const link = document.getElementById('followLink');
+  const button = document.getElementById('followBtn');
 
-        let targetX = 0, targetY = 0;
-        let currentX = 0, currentY = 0;
-        let isScrolling = false;
-        let scrollTimer;
+  let isScrolling = false;
+  let mouseX = 0, mouseY = 0;
+  let currentX = 0, currentY = 0;
 
-        // Track mouse position including scroll
-        document.addEventListener('mousemove', (e) => {
-            const scrollX = window.scrollX || 0;
-            const scrollY = window.scrollY || 0;
-            targetX = e.clientX + scrollX;
-            targetY = e.clientY + scrollY;
-        });
+  // Track mouse position
+  document.addEventListener('mousemove', e => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+  });
 
-        window.addEventListener('scroll', () => {
-            if (!isScrolling) {
-                link.classList.add('shake');
-            }
+  // Detect scroll and reset flag after inactivity
+  let scrollTimeout;
+  window.addEventListener('scroll', () => {
+    isScrolling = true;
+    clearTimeout(scrollTimeout);
+    scrollTimeout = setTimeout(() => {
+      isScrolling = false;
+    }, 150); // delay before stopping movement
+  });
 
-            isScrolling = true;
+  // Smooth follow using lerping
+  function lerp(start, end, factor) {
+    return start + (end - start) * factor;
+  }
 
-            clearTimeout(scrollTimer);
-            scrollTimer = setTimeout(() => {
-                isScrolling = false;
-                link.classList.remove('shake');
-            }, 100);
-        });
+  function animate() {
+    if (isScrolling) {
+      currentX = lerp(currentX, mouseX, 0.1);
+      currentY = lerp(currentY, mouseY, 0.1);
+      button.style.transform = `translate(${currentX}px, ${currentY}px)`;
+    }
+    requestAnimationFrame(animate);
+  }
 
-        // Animate smoothly toward targetX, targetY
-        function animate() {
-            if (isScrolling) {
-                currentX += (targetX - currentX) * 0.15;
-                currentY += (targetY - currentY) * 0.15;
-
-                link.style.left = currentX + 'px';
-                link.style.top = currentY + 'px';
-            }
-            requestAnimationFrame(animate);
-        }
-
-        animate();
-    </script>
+  animate();
+</script>
 
     <style>
         .link-81 {
@@ -563,61 +525,86 @@
 
         <link rel="stylesheet" href="assets/css/forming.css">
         <section class="forming">
-            <div class="reg-box">
-                <div class="reg-title">Admissions Open 2025-26</div>
-                <form class="reg-form" onsubmit="return false;">
-                    <input type="text" class="reg-input" placeholder="Enter Name*" required />
-                    <input type="email" class="reg-input" placeholder="Enter Email*" required />
-                    <div class="reg-phone-wrapper">
-                        <span class="reg-phone-prefix">+91</span>
-                        <input type="tel" class="reg-input" pattern="[0-9]{10}" maxlength="10"
-                            placeholder="Phone Number*" required
-                            style="border:none;outline:none;padding-left:0;background:transparent;" />
-                    </div>
-                    <label for="state-select" class="visually-hidden">Select State*</label>
-                    <select class="reg-select" id="state-select" required>
-                        <option value="" disabled selected>Select State*</option>
-                        <option>Delhi</option>
-                        <option>Uttar Pradesh</option>
-                        <option>Haryana</option>
-                    </select>
-                    <label for="city-select" class="visually-hidden">Select City*</label>
-                    <select class="reg-select" id="city-select" required>
-                        <option value="" disabled selected>Select City*</option>
-                        <option>Ghaziabad</option>
-                        <option>Delhi</option>
-                        <option>Noida</option>
-                    </select>
-                    <label for="course-select" class="visually-hidden">Select Course*</label>
-                    <select class="reg-select" id="course-select" required title="Select Course*">
-                        <option value="" disabled selected>Select Course*</option>
-                        <option>B.Tech</option>
-                        <option>MBA</option>
-                        <option>BBA</option>
-                    </select>
-                    <div class="reg-checkbox-row">
-                        <input type="checkbox" class="reg-checkbox" id="consent" required />
-                        <label for="consent">
-                            I authorize VSIET and its representative to contact me with updates and
-                            notifications via Email, SMS, WhatsApp, and Call. This will override the
-                            registry&nbsp;on&nbsp;DND/NDNC.*
-                        </label>
-                    </div>
-                    <button class="reg-button">Register</button>
-                </form>
-                <div class="reg-footer-row">
-                    <span>Already Registered?</span>
-                    <span class="reg-login-link" onclick="alert('Login action')">Login</span>
-                </div>
-            </div>
-        </section>
-        <script>
-            // Demo JS: Prevent real submit, show alert
-            document.querySelector('.reg-form').onsubmit = function () {
-                alert('Registration form submitted! (Demo only)');
-                return false;
-            };
-        </script>
+  <div class="reg-box">
+    <div class="reg-title">Admissions Open 2025-26</div>
+    <form class="reg-form" onsubmit="return handleSubmit(event)">
+      <input type="text" class="reg-input" placeholder="Enter Name*" required />
+
+      <input type="email" class="reg-input" placeholder="Enter Email*" required />
+
+      <div class="reg-phone-wrapper">
+        <span class="reg-phone-prefix">+91</span>
+        <input type="tel" class="reg-input" pattern="[0-9]{10}" maxlength="10"
+          placeholder="Phone Number*" required style="border:none;outline:none;padding-left:0;background:transparent;" />
+      </div>
+
+      <select class="reg-select" id="state-select" required>
+        <option value="" disabled selected>Select State*</option>
+        <option>Andhra Pradesh</option>
+<option>Arunachal Pradesh</option>
+<option>Assam</option>
+<option>Bihar</option>
+<option>Chhattisgarh</option>
+<option>Goa</option>
+<option>Gujarat</option>
+<option>Haryana</option>
+<option>Himachal Pradesh</option>
+<option>Jharkhand</option>
+<option>Karnataka</option>
+<option>Kerala</option>
+<option>Madhya Pradesh</option>
+<option>Maharashtra</option>
+<option>Manipur</option>
+<option>Meghalaya</option>
+<option>Mizoram</option>
+<option>Nagaland</option>
+<option>Odisha</option>
+<option>Punjab</option>
+<option>Rajasthan</option>
+<option>Sikkim</option>
+<option>Tamil Nadu</option>
+<option>Telangana</option>
+<option>Tripura</option>
+<option>Uttar Pradesh</option>
+<option>Uttarakhand</option>
+<option>West Bengal</option>
+
+        <!-- Add all states as needed -->
+      </select>
+
+      <select class="reg-select" id="city-select" required>
+        <option value="" disabled selected>Select City*</option>
+      </select>
+
+      <select class="reg-select" required>
+        <option value="" disabled selected>Select Course*</option>
+        <option>B.Tech</option>
+        <option>MBA</option>
+        <option>BBA</option>
+      </select>
+
+      <div class="reg-checkbox-row">
+        <input type="checkbox" required style="position: relative;
+    top: 6px;"/>
+        <label style="    font-size: 14px;">
+          I authorize VSIET and its representative to contact me with updates and notifications via Email, SMS, WhatsApp, and Call.
+        </label>
+      </div>
+
+      <!-- Google reCAPTCHA -->
+      <div class="g-recaptcha" data-sitekey="YOUR_SITE_KEY_HERE"></div>
+
+      <button type="submit" class="reg-button">Register</button>
+    </form>
+
+    <div class="reg-footer-row">
+      <span>Already Registered?</span>
+      <span class="reg-login-link" onclick="alert('Login action')">Login</span>
+    </div>
+  </div>
+</section>
+        <script src="assets/js/formings.js"></script>
+
 
         <!-- our program -->
         <section class="program rts-section-padding" style="background-color: #fff;" id="education-about">

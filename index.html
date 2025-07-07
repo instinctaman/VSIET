@@ -22,67 +22,71 @@
     <link rel="stylesheet" href="assets/css/plugins/jquery-ui.css">
     <!-- custom style css -->
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/Responsive1440.css">
 </head>
 <link rel="stylesheet" type="text/css" href="assets/css/adons.css">
 
 <body>
     <style>
         #followBtn {
-  position: fixed;
-  top: -25px;
-  left: -100px;
-  /* padding: 10px 20px; */
-  z-index: 999;
-  /*pointer-events: none;*/ /* prevents button from blocking clicks */
-  transition: transform 0.1s ease;
-}
+            position: fixed;
+            top: -25px;
+            left: -100px;
+            /* padding: 10px 20px; */
+            z-index: 999;
+            /*pointer-events: none;*/
+            /* prevents button from blocking clicks */
+            transition: transform 0.1s ease;
+        }
+
         .shake {
             animation: shake 0.3s infinite;
         }
     </style>
-    <a class="rts-theme-btn btn-arrow" href="https://vocationalservices.in/vsiet_web/eligibility-admission-process" id="followBtn">Apply Now
+    <!-- <a class="rts-theme-btn btn-arrow" href="https://vocationalservices.in/vsiet_web/eligibility-admission-process"
+        id="followBtn">Apply Now
         <span><i class="fa-regular fa-arrow-right"></i></span>
-    </a>
+    </a> -->
 
     <script>
-  const button = document.getElementById('followBtn');
+        const button = document.getElementById('followBtn');
 
-  let isScrolling = false;
-  let mouseX = 0, mouseY = 0;
-  let currentX = 0, currentY = 0;
+        let isScrolling = false;
+        let mouseX = 0, mouseY = 0;
+        let currentX = 0, currentY = 0;
 
-  // Track mouse position
-  document.addEventListener('mousemove', e => {
-    mouseX = e.clientX;
-    mouseY = e.clientY;
-  });
+        // Track mouse position
+        document.addEventListener('mousemove', e => {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+        });
 
-  // Detect scroll and reset flag after inactivity
-  let scrollTimeout;
-  window.addEventListener('scroll', () => {
-    isScrolling = true;
-    clearTimeout(scrollTimeout);
-    scrollTimeout = setTimeout(() => {
-      isScrolling = false;
-    }, 150); // delay before stopping movement
-  });
+        // Detect scroll and reset flag after inactivity
+        let scrollTimeout;
+        window.addEventListener('scroll', () => {
+            isScrolling = true;
+            clearTimeout(scrollTimeout);
+            scrollTimeout = setTimeout(() => {
+                isScrolling = false;
+            }, 150); // delay before stopping movement
+        });
 
-  // Smooth follow using lerping
-  function lerp(start, end, factor) {
-    return start + (end - start) * factor;
-  }
+        // Smooth follow using lerping
+        function lerp(start, end, factor) {
+            return start + (end - start) * factor;
+        }
 
-  function animate() {
-    if (isScrolling) {
-      currentX = lerp(currentX, mouseX, 0.1);
-      currentY = lerp(currentY, mouseY, 0.1);
-      button.style.transform = `translate(${currentX}px, ${currentY}px)`;
-    }
-    requestAnimationFrame(animate);
-  }
+        function animate() {
+            if (isScrolling) {
+                currentX = lerp(currentX, mouseX, 0.1);
+                currentY = lerp(currentY, mouseY, 0.1);
+                button.style.transform = `translate(${currentX}px, ${currentY}px)`;
+            }
+            requestAnimationFrame(animate);
+        }
 
-  animate();
-</script>
+        animate();
+    </script>
 
     <style>
         .link-81 {
@@ -126,15 +130,15 @@
 
     <body>
         <!-- header area start -->
-        <div class="header header__sticky v__3">
+        <div class="header header__sticky v__3" style="background-color: #890C25;">
             <div class="container-fluid header-top">
                 <div class="row">
                     <div class="col-xl-12">
-                        <div class="header__wrapper" style="display: flex;">
+                        <div class="header__wrapper merah_w">
 
-                            <div class="col-lg-6 col-md-6 col-xs-12">
-                                <div class="d-flex align-items-center">
-                                    <div class="header-right float-lg-right" style=" text-align: center; ">
+                            <div class="col-lg-6 col-md-6 col-xs-12 meraL_h">
+                                <div class="d-flex align-items-center meraL_h2">
+                                    <div class="header-right float-lg-right">
                                         <!-- <a href="#">Important Notice</a> -->
                                         <a href="https://vocationalservices.in/vsiet_web/events">Events</a>
                                         <a href="#">Carrer</a>
@@ -148,8 +152,8 @@
                                 </div>
                             </div>
 
-                            <div class="col-lg-6 col-md-6 col-xs-12">
-                                <div class="header__social__link col text-light float-end text-end ">
+                            <div class="col-lg-6 col-md-6 col-xs-12 meraR_h">
+                                <div class="header__social__link col text-light float-end text-end meraR_h2">
 
                                     <a href="callto:+91-9311857965" target="_blank"><i class="fa fa-phone"
                                             aria-hidden="true"></i> +91-9311857965</a>
@@ -187,8 +191,7 @@
                 <div class="row">
                     <div class="col-xl-12">
                         <div class="header__wrapper">
-                            <div class="header__center__content"
-                                style="display: flex; justify-content: space-between; align-items: center;">
+                            <div class="header__center__content headStl">
                                 <!-- menu left side -->
                                 <div class="header__menu">
                                     <div class="navigation">
@@ -239,7 +242,8 @@
                                                 </li>
 
                                                 <!--<li class="navigation__menu--item"><a href="contact.html" class="navigation__menu--item__link" style="margin-right: -20px;">Life @VSIET</a></li>-->
-                                                <li class="navigation__menu--item"><a href="contact_us"
+                                                <li class="navigation__menu--item"><a
+                                                        href="https://vocationalservices.in/vsiet_web/contact_us"
                                                         class="navigation__menu--item__link">Contact</a></li>
                                             </ul>
                                         </nav>
@@ -313,26 +317,26 @@
 
                         </li>
 
-                        <li class="has-droupdown">
-                            <a href="#" class="main">About Us</a>
-                        </li>
-                        <li class="has-droupdown">
-                            <a href="#" class="main">Academics</a>
-                        </li>
-                        <li class="has-droupdown">
-                            <a href="#" class="main">Admission</a>
-                        </li>
-                        <li class="has-droupdown">
-                            <a href="#" class="main">Placement</a>
-                        </li>
-                        <li class="has-droupdown">
-                            <a href="#" class="main">Infrstructure</a>
-                        </li>
-                        <li class="has-droupdown">
-                            <a href="#" class="main">Life @VSIET</a>
+                        <li>
+                            <a href="#education-about" class="main">About Us</a>
                         </li>
                         <li>
-                            <a href="contact_us" class="main">Contact Us</a>
+                            <a href="#education-placement" class="main">Placement</a>
+                        </li>
+                        <li>
+                            <a href="#education-academics" class="main">Academics</a>
+                        </li>
+                        <li>
+                            <a href="#education-faculty" class="main">Faculty</a>
+                        </li>
+                        <li>
+                            <a href="#campus_life" class="main">Life @VSIET</a>
+                        </li>
+                        <li>
+                            <a href="#education-infra" class="main">Infrastructure</a>
+                        </li>
+                        <li>
+                            <a href="https://vocationalservices.in/vsiet_web/contact_us" class="main">Contact Us</a>
                         </li>
                     </ul>
                 </nav>
@@ -524,85 +528,66 @@
 
 
         <link rel="stylesheet" href="assets/css/forming.css">
-        <section class="forming">
-  <div class="reg-box">
-    <div class="reg-title">Admissions Open 2025-26</div>
-    <form class="reg-form" onsubmit="return handleSubmit(event)">
-      <input type="text" class="reg-input" placeholder="Enter Name*" required />
+        <div class="karcenter">
+            <section class="forming">
 
-      <input type="email" class="reg-input" placeholder="Enter Email*" required />
+                <div class="reg-box">
+                    <div class="reg-title">Admissions Open 2025-27</div>
+                    <form class="reg-form" onsubmit="return handleSubmit(event)">
+                        <input type="text" class="reg-input" placeholder="Enter Name*" required />
 
-      <div class="reg-phone-wrapper">
-        <span class="reg-phone-prefix">+91</span>
-        <input type="tel" class="reg-input" pattern="[0-9]{10}" maxlength="10"
-          placeholder="Phone Number*" required style="border:none;outline:none;padding-left:0;background:transparent;" />
-      </div>
+                        <input type="email" class="reg-input" placeholder="Enter Email*" required />
 
-      <select class="reg-select" id="state-select" required>
-        <option value="" disabled selected>Select State*</option>
-        <option>Andhra Pradesh</option>
-<option>Arunachal Pradesh</option>
-<option>Assam</option>
-<option>Bihar</option>
-<option>Chhattisgarh</option>
-<option>Goa</option>
-<option>Gujarat</option>
-<option>Haryana</option>
-<option>Himachal Pradesh</option>
-<option>Jharkhand</option>
-<option>Karnataka</option>
-<option>Kerala</option>
-<option>Madhya Pradesh</option>
-<option>Maharashtra</option>
-<option>Manipur</option>
-<option>Meghalaya</option>
-<option>Mizoram</option>
-<option>Nagaland</option>
-<option>Odisha</option>
-<option>Punjab</option>
-<option>Rajasthan</option>
-<option>Sikkim</option>
-<option>Tamil Nadu</option>
-<option>Telangana</option>
-<option>Tripura</option>
-<option>Uttar Pradesh</option>
-<option>Uttarakhand</option>
-<option>West Bengal</option>
+                        <div class="reg-phone-wrapper">
+                            <span class="reg-phone-prefix">+91</span>
+                            <input type="tel" class="reg-input" id="mobile" name="mobile" pattern="[0-9]{10}"
+                                maxlength="10" required placeholder="Phone Number*"
+                                style="border:none;outline:none;padding-left:0;background:transparent;"
+                                oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+                        </div>
 
-        <!-- Add all states as needed -->
-      </select>
+                        <select id="state" class="reg-select" aria-label="Select State" onchange="fetchCities()">
+                            <option value="">Select State</option>
+                        </select>
 
-      <select class="reg-select" id="city-select" required>
-        <option value="" disabled selected>Select City*</option>
-      </select>
+                        <select id="city" class="reg-select" aria-label="Select City">
+                            <option value="">Select a state first</option>
+                        </select>
 
-      <select class="reg-select" required>
-        <option value="" disabled selected>Select Course*</option>
-        <option>B.Tech</option>
-        <option>MBA</option>
-        <option>BBA</option>
-      </select>
+                        <select id="course-select" class="reg-select" required aria-label="Select Course*">
+                            <option value="" disabled selected>Select Course*</option>
+                            <option>B-tech</option>
+                            <option>BBA</option>
+                            <option>MBA</option>
+                        </select>
+                        <div class="captcha-box">
+                            <div id="captcha" class="captcha">----</div>
+                            <span style="font-size: 12px;" onclick="generateCaptcha()">Refresh</span>
+                        </div>
 
-      <div class="reg-checkbox-row">
-        <input type="checkbox" required style="position: relative;
-    top: 6px;"/>
-        <label style="    font-size: 14px;">
-          I authorize VSIET and its representative to contact me with updates and notifications via Email, SMS, WhatsApp, and Call.
-        </label>
-      </div>
+                        <input type="text" class="reg-input" id="captchaInput" placeholder="Enter CAPTCHA"
+                            oninput="clearCaptchaError()">
+                        <div class="error-message" id="captchaError">Incorrect CAPTCHA. Please try again.</div>
+                        <div class="reg-checkbox-row">
+                            <input type="checkbox" id="consent-checkbox" required title="Consent to contact" />
+                            <label for="consent-checkbox" class="consent-checkbox">
+                                I authorize VSIET and its representative to contact me with updates and notifications
+                                via
+                                Email,
+                                SMS, WhatsApp, and Call.
+                            </label>
+                        </div>
 
-      <!-- Google reCAPTCHA -->
-      <div class="g-recaptcha" data-sitekey="YOUR_SITE_KEY_HERE"></div>
+                        <button type="submit" class="reg-button" onclick="validateCaptcha()">Register</button>
+                    </form>
 
-      <button type="submit" class="reg-button">Register</button>
-    </form>
-
-    <div class="reg-footer-row">
-      <span>Already Registered?</span>
-      <span class="reg-login-link" onclick="alert('Login action')">Login</span>
-    </div>
-  </div>
-</section>
+                    <div class="reg-footer-row">
+                        <span>Already Registered?</span>
+                        <span class="reg-login-link" onclick="alert('Login action')">Login</span>
+                    </div>
+                </div>
+            </section>
+        </div>
         <script src="assets/js/formings.js"></script>
 
 
@@ -1143,97 +1128,97 @@
                         </div>
                     </div>
                     <div class=" card-slider">
-                        <div class="card-wrapper">
-                            <div class="full1">
-                                <div class="back">
-                                    <div class="gaping">
-                                        <img src="assets/images/author/3.jpg" alt="">
+                                    <div class="card-wrapper">
+                                        <div class="full1">
+                                            <div class="back">
+                                                <div class="gaping">
+                                                    <img src="assets/images/author/3.jpg" alt="">
+                                                </div>
+                                            </div>
+                                            <div id="boxe"></div>
+                                            <div class="textunderimg">
+                                                <h2 class="name">Best Institute with Industry Linkages <i>by Icon
+                                                        Award</i></h2>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                                <div id="boxe"></div>
-                                <div class="textunderimg">
-                                    <h2 class="name">Best Institute with Industry Linkages <i>by Icon
-                                            Award</i></h2>
+                                    <div class="card-wrapper">
+                                        <div class="full1">
+                                            <div class="back">
+                                                <div class="gaping">
+                                                    <img src="assets/images/author/10.jpg" alt="">
+                                                </div>
+                                            </div>
+                                            <div id="boxe"></div>
+                                            <div class="textunderimg">
+                                                <h2 class="name">Best Private Institute of India<br><i>by Global
+                                                        Leadership
+                                                        awards</i>
+                                                </h2>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-wrapper">
+                                        <div class="full1">
+                                            <div class="back">
+                                                <div class="gaping">
+                                                    <img src="assets/images/author/7.jpg" alt="">
+                                                </div>
+                                            </div>
+                                            <div id="boxe"></div>
+                                            <div class="textunderimg">
+                                                <h2 class="name">Most Preferred Institute of India <i>by Integrated
+                                                        achievers.</i></h2>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-wrapper">
+                                        <div class="full1">
+                                            <div class="back">
+                                                <div class="gaping">
+                                                    <img src="assets/images/author/9.jpg" alt="">
+                                                </div>
+                                            </div>
+                                            <div id="boxe"></div>
+                                            <div class="textunderimg">
+                                                <h2 class="name">Best Educator in India <i>by International Education
+                                                        excellence.</i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-wrapper">
+                                        <div class="full1">
+                                            <div class="back">
+                                                <div class="gaping">
+                                                    <img src="assets/images/author/11.jpg" alt="">
+                                                </div>
+                                            </div>
+                                            <div id="boxe"></div>
+                                            <div class="textunderimg">
+                                                <h2 class="name">Most Promising Institute in India <i>by International
+                                                        business
+                                                        awards</i></h2>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-wrapper">
+                                        <div class="full1">
+                                            <div class="back">
+                                                <div class="gaping">
+                                                    <img src="assets/images/author/12.jpg" alt="">
+                                                </div>
+                                            </div>
+                                            <div id="boxe"></div>
+                                            <div class="textunderimg">
+                                                <h2 class="name">Asia’s Best Institute <i>by Global Excellence life
+                                                        style</i>
+                                                </h2>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="card-wrapper">
-                            <div class="full1">
-                                <div class="back">
-                                    <div class="gaping">
-                                        <img src="assets/images/author/10.jpg" alt="">
-                                    </div>
-                                </div>
-                                <div id="boxe"></div>
-                                <div class="textunderimg">
-                                    <h2 class="name">Best Private Institute of India<br><i>by Global
-                                            Leadership
-                                            awards</i>
-                                    </h2>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card-wrapper">
-                            <div class="full1">
-                                <div class="back">
-                                    <div class="gaping">
-                                        <img src="assets/images/author/7.jpg" alt="">
-                                    </div>
-                                </div>
-                                <div id="boxe"></div>
-                                <div class="textunderimg">
-                                    <h2 class="name">Most Preferred Institute of India <i>by Integrated
-                                            achievers.</i></h2>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card-wrapper">
-                            <div class="full1">
-                                <div class="back">
-                                    <div class="gaping">
-                                        <img src="assets/images/author/9.jpg" alt="">
-                                    </div>
-                                </div>
-                                <div id="boxe"></div>
-                                <div class="textunderimg">
-                                    <h2 class="name">Best Educator in India <i>by International Education
-                                            excellence.</i>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card-wrapper">
-                            <div class="full1">
-                                <div class="back">
-                                    <div class="gaping">
-                                        <img src="assets/images/author/11.jpg" alt="">
-                                    </div>
-                                </div>
-                                <div id="boxe"></div>
-                                <div class="textunderimg">
-                                    <h2 class="name">Most Promising Institute in India <i>by International
-                                            business
-                                            awards</i></h2>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card-wrapper">
-                            <div class="full1">
-                                <div class="back">
-                                    <div class="gaping">
-                                        <img src="assets/images/author/12.jpg" alt="">
-                                    </div>
-                                </div>
-                                <div id="boxe"></div>
-                                <div class="textunderimg">
-                                    <h2 class="name">Asia’s Best Institute <i>by Global Excellence life
-                                            style</i>
-                                    </h2>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </section>
         <!-- partial -->
         <script src='https://cdnjs.cloudflare.com/ajax/libs/web-animations/2.3.1/web-animations.min.js'></script>
@@ -1253,18 +1238,7 @@
                             slidesToShow: 2
                         }
                     },
-                    // {
-                    //     breakpoint: 900,
-                    //     settings: {
-                    //         slidesToShow: 2
-                    //     }
-                    // },
-                    // {
-                    //     breakpoint: 768,
-                    //     settings: {
-                    //         slidesToShow: 2
-                    //     }
-                    // },
+
                     {
                         breakpoint: 600,
                         settings: {
@@ -2334,7 +2308,7 @@
         </section>
         <!-- student feedback end -->
 
-        
+
 
 
 
@@ -2581,25 +2555,24 @@
             integrity="sha512-ILOQokRQNF0S8SKV6fnaLNj02CmZnDWmYUr3zlH4jwToep0lWc7twuTzF+Mm0cKPdszi0xe8KymVi2y7mAweVQ=="
             crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <nav class="social">
-            <ul>
+            <!-- <ul>
                 <li><a href="#">Facebook <i class="fa fa-facebook"></i></a></li>
                 <li><a href="#">Linkdien <i class="fa fa-linkedin"></i></a></li>
                 <li><a href="#">Twitter <i class="fa-brands fa-x-twitter"></i></a></li>
                 <li><a href="#">Instagram <i class="fa fa-instagram"></i></a></li>
                 <li><a href="#">Youtube <i class="fa fa-youtube"></i></a></li>
-                <!--<li><a href="#">Youtube <i class="fa-brands fa-x-twitter"></i></a></li>-->
 
-            </ul>
+            </ul> -->
         </nav>
 
 
-        <div class="social1">
+        <!-- <div class="social1">
             <a href="https://apply.gnimgreaternoida.in/" target="_blank" rel="noopener" class="btn-new-m"><span
-                    class="blink_me"><!-- <i class="fa fa-phone-square"></i> Font Awesome fontawesome.com -->
+                    class="blink_me">
                     Admission
                     Enquiry</span></a>
 
-        </div>
+        </div> -->
 
 
         <style>
@@ -2704,12 +2677,12 @@
             /*end fixed social*/
         </style>
         <div id="fixed-social">
-            <div>
+            <!-- <div>
                 <a href="https://api.whatsapp.com/send?phone=919311857965" target="_blank" rel="noopener"
                     class="fixed-facebook" title="Chat with us on WhatsApp">
                     <i class="fa-brands fa-whatsapp wh_b"></i> <span>whatsapp</span>
                 </a>
-            </div>
+            </div> -->
             <!--<div>-->
             <!--  <a href="#" class="fixed-twitter" target="_blank"><i class="fa fa-twitter"></i> <span>Twitter</span></a>-->
             <!--</div>-->
@@ -2723,8 +2696,8 @@
             <!--  <a href="#" class="fixed-instagrem" target="_blank"><i class="fa fa-instagram"></i> <span>Instagram</span></a>-->
             <!--</div>-->
             <!--<div>-->
-            <a href="#" class="fixed-tumblr" target="_blank"><i class="fa fa-file-text wh_b"></i>
-                <span>Brochure</span></a>
+            <!-- <a href="#" class="fixed-tumblr" target="_blank"><i class="fa fa-file-text wh_b"></i>
+                <span>Brochure</span></a> -->
         </div>
         </div>
         <!-- partial -->
@@ -2914,15 +2887,22 @@
                             <h6 class="un">About</h6>
                             <div class="rts-footer-menu">
                                 <ul style="color:#fff !important">
-                                    <li style="margin-top: 0px !important; " class="white"><a href="https://vocationalservices.in/vsiet_web/about_us">About
+                                    <li style="margin-top: 0px !important; " class="white"><a
+                                            href="https://vocationalservices.in/vsiet_web/about_us">About
                                             Us</a></li>
-                                    <li class="white"><a href="https://vocationalservices.in/vsiet_web/about_us">Vision & Mission</a></li>
-                                    <li class="white"><a href="https://vocationalservices.in/vsiet_web/program-overview">Programme Highlights</a></li>
-                                    <li class="white"><a href="https://vocationalservices.in/vsiet_web/faculty">Faculty & Research</a></li>
+                                    <li class="white"><a href="https://vocationalservices.in/vsiet_web/about_us">Vision
+                                            & Mission</a></li>
+                                    <li class="white"><a
+                                            href="https://vocationalservices.in/vsiet_web/program-overview">Programme
+                                            Highlights</a></li>
+                                    <li class="white"><a href="https://vocationalservices.in/vsiet_web/faculty">Faculty
+                                            & Research</a></li>
 
-                                    <li class="white"><a href="https://vocationalservices.in/vsiet_web/assets/files/VSIET_EOA_Report_2025-2026.pdf"
+                                    <li class="white"><a
+                                            href="https://vocationalservices.in/vsiet_web/assets/files/VSIET_EOA_Report_2025-2026.pdf"
                                             target="_blank">AICTE Approval</a></li>
-                                    <li class="white"><a href="https://vocationalservices.in/vsiet_web/contact_us">Contact</a></li>
+                                    <li class="white"><a
+                                            href="https://vocationalservices.in/vsiet_web/contact_us">Contact</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -2935,11 +2915,20 @@
                                     <li style="margin-top: 0px !important; " class="white"><a href="#">Academic
                                             Roadmap
                                         </a></li>
-                                    <li class="white"><a href="https://vocationalservices.in/vsiet_web/pedagogy">Pedagogy</a></li>
-                                    <li class="white"><a href="https://vocationalservices.in/vsiet_web/course-curriculum-btech">Curriculum</a></li>
-                                    <li class="white"><a href="https://vocationalservices.in/vsiet_web/fee-scholarships">Program Fee</a></li>
-                                    <li class="white"><a href="https://vocationalservices.in/vsiet_web/fee-scholarships">Scholarship</a></li>
-                                    <li class="white"><a href="https://vocationalservices.in/vsiet_web/eligibility-admission-process">Admission</a></li>
+                                    <li class="white"><a
+                                            href="https://vocationalservices.in/vsiet_web/pedagogy">Pedagogy</a></li>
+                                    <li class="white"><a
+                                            href="https://vocationalservices.in/vsiet_web/course-curriculum-btech">Curriculum</a>
+                                    </li>
+                                    <li class="white"><a
+                                            href="https://vocationalservices.in/vsiet_web/fee-scholarships">Program
+                                            Fee</a></li>
+                                    <li class="white"><a
+                                            href="https://vocationalservices.in/vsiet_web/fee-scholarships">Scholarship</a>
+                                    </li>
+                                    <li class="white"><a
+                                            href="https://vocationalservices.in/vsiet_web/eligibility-admission-process">Admission</a>
+                                    </li>
 
                                 </ul>
                             </div>
@@ -2953,11 +2942,13 @@
                                     <li style="margin-top: 0px !important; " class="white"><a href="#">Accreditations &
                                             Affiliations </a></li>
 
-                                    <li class="white"><a href="https://vocationalservices.in/vsiet_web/campus">Campus Tour</a></li>
+                                    <li class="white"><a href="https://vocationalservices.in/vsiet_web/campus">Campus
+                                            Tour</a></li>
                                     <li class="white"><a href="https://vocationalservices.in/vsiet_web/faq">FAQ</a></li>
                                     <li class="white"><a href="#">Downloads</a></li>
                                     <li class="white"><a href="#">Privacy Policy</a></li>
-                                    <li class="white"><a href="https://vocationalservices.in/vsiet_web/assets/files/VSIET_EOA_Report_2025-2026.pdf"
+                                    <li class="white"><a
+                                            href="https://vocationalservices.in/vsiet_web/assets/files/VSIET_EOA_Report_2025-2026.pdf"
                                             target="_blank">EOA Report</a></li>
 
                                 </ul>
@@ -3044,46 +3035,46 @@
             <div id="close" class="search-close-icon"><i class="far fa-times"></i></div>
         </div>
         <!-- rts backto top start -->
-         <style>
+        <style>
             #scrollTopBtn {
-  display: none; /* Hidden by default */
-  position: fixed;
-  bottom: 40px;
-  right: 30px;
-  z-index: 99;
-  font-size: 18px;
-  border: none;
-  outline: none;
-  background-color: #333;
-  color: white;
-  cursor: pointer;
-  padding: 10px 15px;
-  border-radius: 8px;
-  transition: 0.3s;
-}
+                display: none;
+                /* Hidden by default */
+                position: fixed;
+                bottom: 40px;
+                right: 30px;
+                z-index: 99;
+                font-size: 18px;
+                border: none;
+                outline: none;
+                background-color: #333;
+                color: white;
+                cursor: pointer;
+                padding: 10px 15px;
+                border-radius: 8px;
+                transition: 0.3s;
+            }
 
-#scrollTopBtn:hover {
-  background-color: #555;
-}
-
-         </style>
+            #scrollTopBtn:hover {
+                background-color: #555;
+            }
+        </style>
         <button onclick="scrollToTop()" id="scrollTopBtn" title="Go to top">↑</button>
         <script>
-  // Show the button when scrolled down
-  window.onscroll = function () {
-    const btn = document.getElementById("scrollTopBtn");
-    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-      btn.style.display = "block";
-    } else {
-      btn.style.display = "none";
-    }
-  };
+            // Show the button when scrolled down
+            window.onscroll = function () {
+                const btn = document.getElementById("scrollTopBtn");
+                if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                    btn.style.display = "block";
+                } else {
+                    btn.style.display = "none";
+                }
+            };
 
-  // Scroll to the top when the button is clicked
-  function scrollToTop() {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }
-</script>
+            // Scroll to the top when the button is clicked
+            function scrollToTop() {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+        </script>
 
 
         <!-- rts back to top end -->

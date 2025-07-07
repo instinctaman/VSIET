@@ -1,424 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>slider</title>
-</head>
-<body>
+    <title>Document</title>
     <style>
-            .carousel {
-                display: none;
-                width: 100%;
-                height: 100%;
-                background-color: #eee;
-                text-align: center;
-                line-height: 300px;
-                font-size: 2rem;
-                transition: all 0.3s ease-in-out;
-            }
+        /* Container that will scroll */
+        .scroll-box {
+            height: 200px;
+            overflow-y: auto;
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
 
-            .carousel.active {
-                display: block;
-            }
+        /* Scrollbar track */
+        .scroll-box::-webkit-scrollbar {
+            width: 8px;
+        }
 
-            .switch-btn {
-                margin: 20px;
-                padding: 10px 20px;
-                font-size: 1rem;
-            }
-        </style>
+        /* Scrollbar handle */
+        .scroll-box::-webkit-scrollbar-thumb {
+            background: #007bff;
+            border-radius: 10px;
+        }
 
-        <!-- Nivo Slider -->
-        <link rel="stylesheet" href="inc/custom-slider/css/nivo-slider.css" type="text/css" />
-        <!-- Slider -->
-        <div class="carousel active" id="carousel1">
-            <div class="slider-area">
-                <div class="bend niceties preview-2">
-                    <div id="ensign-nivoslider" class="slides">
-                        <img src="slider/web_slide01.jpg" alt="" title="#slider-direction-1" />
-                        <img src="slider/web_slide02.jpg" alt="" title="#slider-direction-2" />
-                        <img src="slider/web_slide03.jpg" alt="" title="#slider-direction-3" />
-                        <img src="slider/web_slide04.jpg" alt="" title="#slider-direction-4" />
-                        <img src="slider/web_slide01.jpg" alt="" title="#slider-direction-5" />
-                    </div>
-                    <!-- direction 1 -->
-                    <div id="slider-direction-1" class="t-cn slider-direction">
-                        <div class="slider-progress"></div>
-                        <div class="slider-content t-cn s-tb slider-1">
-                            <!--<div class="title-container s-tb-c title-compress">-->
-                            <!--    <h1>Admissions Open for<br> <span class="text-theme-colored2" style="transition: none; text-align: center; line-height: 10px; border-width: 0px; margin: 0px; padding: 0px; letter-spacing: 0px; font-weight: 800; color: #890C25;">B.Tech 2025</span></h1>-->
-                            <!--    <p>Step into a world of endless opportunities! Apply now for B.Tech at VSIET and secure your place in an institution that paves the way for your success.</p>-->
-                            <!--    <div class="slider-button">-->
-                            <!--        <ul>-->
-                            <!--            <li><a href="#" class="btn btn-tp rts-theme-btn btn-arrow" >Apply Now </a>-->
+        /* Scrollbar background */
+        .scroll-box::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+    </style>
+</head>
 
-                            <!--            </li>-->
-                            <!--        </ul>-->
-                            <!--    </div>-->
-                            <!--</div>-->
-                        </div>
-                    </div>
-                    <!-- direction 2 -->
-                    <div id="slider-direction-2" class="slider-direction">
-                        <div class="slider-progress"></div>
-                        <div class="slider-content t-lfl s-tb slider-2">
-                            <!--<div class="title-container s-tb-c">-->
-                            <!--    <h1>Admissions Open for<br> <span class="text-theme-colored2" style="transition: none; text-align: center; line-height: 10px; border-width: 0px; margin: 0px; padding: 0px; letter-spacing: 0px; font-weight: 800; color: #890C25;">  MBA 2025</span></h1>-->
-                            <!--    <p>Unlock your business potential! Enroll in VSIET’s MBA program today and gain the skills, knowledge, and exposure required to lead in the corporate world.</p>-->
-                            <!--    <div class="slider-button">-->
-                            <!--        <ul>-->
-                            <!--            <li><a href="#" class="btn btn-tp rts-theme-btn btn-arrow" >Apply Now </a>-->
+<body>
+    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia est quae facere molestiae sequi quam accusantium
+    voluptatum corrupti ipsum eaque nemo, voluptates labore aut dignissimos consequuntur, quas aliquam ad atque, amet at
+    neque non. Iure ad alias ipsum unde, architecto neque, nobis illum voluptatibus impedit enim incidunt ducimus
+    deserunt, dicta commodi at voluptatum laudantium officia repellendus! Sunt, quod laborum! Velit architecto id eaque
+    harum at? Nulla et omnis sapiente accusantium quasi deserunt officia dignissimos? Fugit quo eaque consequuntur
+    aspernatur laudantium commodi, possimus eos sunt, dignissimos similique culpa quisquam iusto, tempora architecto.
+    Saepe nobis ratione optio officiis deserunt laudantium nisi debitis cum a! Dolore id esse officiis cum itaque iusto
+    nulla. Atque saepe repellendus, corrupti aspernatur corporis sunt aut dolor, assumenda hic perspiciatis molestiae
+    amet animi nostrum commodi reiciendis accusantium fugiat excepturi nam libero nihil? Suscipit ad eveniet, excepturi
+    asperiores impedit illum distinctio corporis explicabo modi quisquam nihil, iusto similique beatae officia amet
+    temporibus quam. Pariatur labore nemo alias odit deleniti rerum quod sed fugit ipsum, consequatur sapiente
+    consectetur voluptatibus numquam soluta distinctio corporis, reiciendis similique tenetur quos? Mollitia,
+    necessitatibus libero. At voluptatibus maiores ex, id alias neque quod eum illum error veritatis fugiat, cum earum
+    inventore similique eligendi, esse nemo!
+    <div class="scroll-box">
+        <p>This content will scroll if it overflows the box height...</p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi incidunt hic id itaque iure nam quae quis,
+        repellendus iusto maxime nihil fugit commodi beatae ea ullam suscipit et mollitia voluptates ducimus sit
+        corrupti, consequuntur blanditiis odit perspiciatis! Ipsam officiis doloribus laboriosam dolorum omnis atque,
+        adipisci, quisquam nemo assumenda eveniet amet fuga! Quisquam, consequuntur ut? Nesciunt sed maiores voluptatum
+        deserunt facilis doloribus, a voluptates animi quisquam dolores, dolorem culpa nam laudantium doloremque quasi
+        aut, nostrum numquam nulla. Odio enim ullam facilis veniam sapiente sunt impedit nobis ut commodi maiores.
+        Corrupti veniam quo iste illum! Blanditiis expedita quod, maiores reiciendis possimus officia.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis harum quidem, maiores architecto animi veniam
+        iusto omnis quibusdam enim asperiores expedita similique repellat dolor hic tempore inventore praesentium eos
+        perspiciatis cum incidunt soluta. Aut corporis exercitationem id placeat voluptates optio, autem fugit, impedit
+        vel quos perferendis. Quam, recusandae eius? Reprehenderit eius doloremque ipsum hic laboriosam fugit eum quam
+        mollitia minus expedita. Quae a cupiditate quia fugiat unde iusto atque, voluptatibus corrupti laboriosam
+        deleniti facere enim voluptatem reprehenderit delectus pariatur iste velit inventore, sit ducimus. Sed iste
+        recusandae tempore corrupti, officia quasi explicabo expedita possimus deserunt saepe! Possimus voluptates alias
+        fuga nisi repudiandae, accusamus sequi nobis dolore quam illum voluptate ad soluta porro ipsum aliquid error
+        consequatur, nostrum id ut? Molestiae corporis id aspernatur dolore itaque eligendi deleniti, tempora quam
+        facere reprehenderit officia quo cumque sint rerum! Iste deserunt modi eius optio odit voluptatum fugiat
+        architecto illo accusantium sunt ipsa vitae, numquam, illum expedita totam delectus animi quae, nobis ratione.
+        Totam, doloribus nostrum corrupti praesentium veritatis quia modi placeat? Tempore necessitatibus fugit alias
+        cum voluptatem unde esse debitis nostrum? Excepturi quos possimus, accusantium saepe soluta impedit ea provident
+        voluptatibus! Odio rerum id repellat debitis delectus a pariatur eum, quisquam earum, dolorem sapiente
+        perspiciatis sint autem, deserunt fuga sit voluptatem rem ducimus quidem libero exercitationem doloribus aliquid
+        eaque. Consectetur autem, exercitationem quidem perferendis vero est doloremque error. Alias voluptatem rem
+        consequuntur repudiandae vel ipsam repellendus fugiat quae doloremque, dignissimos aliquid veritatis quo!
+        Laudantium excepturi nam quos, vitae quam ullam tenetur qui impedit deserunt illum. Consequuntur obcaecati totam
+        voluptate impedit hic earum atque veniam quae sit, dicta quod saepe provident et autem nemo tempore nam cumque
+        laborum placeat? Dolore magnam unde eligendi autem cum nesciunt culpa facilis eveniet tempora, vel rem ab beatae
+        nam ducimus magni alias reprehenderit provident fugit tenetur quibusdam quod molestias non! Reiciendis tempora
+        sequi asperiores voluptates veritatis dolore aut aspernatur! Magnam rem quo sit voluptates aliquam quibusdam.
+        Vel hic odio sit voluptatibus magni quas accusamus soluta autem consectetur voluptas excepturi nesciunt
+        quibusdam fugiat, adipisci deserunt vero aperiam, libero nam? Voluptatum commodi aspernatur repudiandae
+        repellat, magni fuga natus, praesentium culpa necessitatibus cumque assumenda autem, eum consequuntur illo
+        nihil? Esse nulla illo deserunt. Saepe accusantium ducimus consequatur ea at laboriosam est doloremque cumque
+        blanditiis a, laudantium ipsam cupiditate incidunt atque recusandae omnis rem? Consequuntur laudantium dolore,
+        et recusandae rem ut modi alias aspernatur fugiat itaque. Ratione facilis tempore voluptatibus? Odit,
+        voluptatum.
+        <!-- Repeat more content here -->
+    </div>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus obcaecati ex odio, fugit tempore repellendus in
+    sunt natus expedita voluptatibus fugiat nemo eius quidem voluptas ducimus aliquid possimus amet. Quidem
+    reprehenderit officia nam, soluta omnis ipsam libero corporis corrupti dolores blanditiis reiciendis ipsum
+    asperiores consequuntur modi voluptates id. Quod exercitationem labore ea molestias numquam cum, dolorem iure vero
+    esse iusto quo alias ipsam! Officia minus fugiat temporibus sunt ullam quisquam. Eius dolor, consectetur voluptatem
+    fuga quo commodi aperiam, dolore sit fugit mollitia repellat perferendis pariatur eligendi ullam culpa, modi enim
+    aliquam iure tenetur. Nisi fugit laudantium minima exercitationem vero illo delectus reprehenderit voluptatibus quos
+    tempore sit quasi corrupti dolorum quo incidunt vel consequatur dignissimos, accusamus officia praesentium quidem
+    sunt assumenda. Iure asperiores ullam distinctio neque, odio officiis, nulla at ea sapiente a et dolorum fuga
+    incidunt. Quod animi ipsam ipsum non. Earum minima laboriosam at? Dolore ea accusantium nemo voluptatum animi iusto
+    inventore quisquam quis nobis similique odio et quibusdam accusamus natus non corporis ipsum ab fugit sequi
+    voluptatibus sit porro rem, quas distinctio. Provident, blanditiis possimus numquam perferendis aspernatur aliquam
+    esse laudantium in necessitatibus doloremque beatae iusto molestias fugit distinctio. Tenetur debitis rem, maiores
+    laboriosam fuga quas quos incidunt nisi iure suscipit dignissimos reprehenderit, rerum neque consequuntur repellat
+    temporibus! Praesentium dolores eius veritatis, deleniti commodi vel voluptatum voluptates, neque doloremque,
+    pariatur iste possimus cum quod officiis quia atque quibusdam architecto provident fugit earum laboriosam vitae!
+    Rem, dolorem quod. Sit blanditiis doloremque accusantium sint. Minus eius dicta iste voluptas magnam nobis
+    praesentium autem dolorum officiis aut repellat neque velit odio, deleniti facilis nihil provident ipsum pariatur
+    maxime. Incidunt esse accusamus, minima facere tenetur, ratione error unde magnam suscipit ipsum, quis voluptatum
+    quae nemo ipsa alias magni libero quos. Sit illo libero dignissimos accusantium id ut, neque quas sed mollitia quis,
+    ipsam laborum magni in iste labore earum natus, omnis facere itaque dolores repudiandae facilis! Dolor, non amet
+    pariatur molestiae a corporis. Velit nisi suscipit explicabo temporibus. Perspiciatis aliquam sed porro, quis illo
+    in natus quisquam molestiae culpa magni officia aut nisi excepturi. Quia commodi saepe excepturi laborum nostrum
+    quae assumenda perspiciatis facilis nulla pariatur maiores corporis soluta similique, tempore possimus iste
+    consequuntur placeat amet voluptatibus ullam ad dicta. Dolor fuga officia a cumque dicta provident odio molestias
+    maxime animi illum voluptate quisquam ipsam, atque suscipit optio odit quae nostrum. Provident amet, qui pariatur
+    inventore, ipsum eveniet quod iusto laudantium reprehenderit rem a quo saepe, labore neque necessitatibus.
+    Voluptatem, adipisci placeat facere quisquam assumenda debitis! Reprehenderit voluptate magnam culpa in voluptates
+    consequatur at, quod, eos sint beatae, id cupiditate quasi voluptatum neque ratione perferendis facere provident
+    veniam. Cumque pariatur consequuntur, dolores voluptatibus natus doloremque, iusto odit saepe sapiente, totam
+    voluptas suscipit? Culpa.
 
-                            <!--            </li>-->
-                            <!--        </ul>-->
-                            <!--    </div>-->
-                            <!--</div>-->
-                        </div>
-                    </div>
-                    <!-- direction 3 -->
-                    <div id="slider-direction-3" class="slider-direction">
-                        <div class="slider-progress"></div>
-                        <div class="slider-content t-lfr s-tb slider-3">
-                            <!--<div class="title-container s-tb-c">-->
-                            <!--    <h1>Empowering Tomorrow's<br> <span class="text-theme-colored2" style="transition: none; text-align: center; line-height: 10px; border-width: 0px; margin: 0px; padding: 0px; letter-spacing: 0px; font-weight: 800; color: #890C25;">Engineers</span></h1>-->
-                            <!--    <p>Join VSIET – where innovation meets excellence. Future-ready B.Tech & Diploma programs, world-class faculty, and hands-on learning to shape industry leaders.</p>-->
-                            <!--    <div class="slider-button">-->
-                            <!--        <ul>-->
-                            <!--            <li>-->
-                            <!--                <a href="#" class="btn btn-tp rts-theme-btn btn-arrow" >Join VSIET </a>-->
-
-                            <!--            </li>-->
-                            <!--        </ul>-->
-                            <!--    </div>-->
-                            <!--</div>-->
-                        </div>
-                    </div>
-
-                    <!-- direction 4 -->
-                    <div id="slider-direction-4" class="t-cn slider-direction">
-                        <div class="slider-progress"></div>
-                        <div class="slider-content t-cn s-tb slider-1">
-                            <!--<div class="title-container s-tb-c title-compress">-->
-                            <!--    <h1>Industry Exposure, <br> <span class="text-theme-colored2" style="transition: none; text-align: center; line-height: 70px; border-width: 0px; margin: 0px; padding: 0px; letter-spacing: 0px; font-weight: 800; color: #890C25;">Real Learning</span></h1>-->
-                            <!--    <p>Internships, live projects, and industrial visits ensure students graduate job-ready. Learn beyond books with our strong industry-academic ecosystem.</p>-->
-                            <!--    <div class="slider-button">-->
-                            <!--        <ul>-->
-                            <!--            <li><a href="#" class="btn btn-tp rts-theme-btn btn-arrow" >Apply Now </a>-->
-                            <!-- <a href="#" class="btn btn-tp rts-theme-btn btn-arrow"  >Sign up </a>   -->
-                            <!--            </li>-->
-                            <!--        </ul>-->
-                            <!--    </div>-->
-                            <!--</div>-->
-                        </div>
-                    </div>
-                    <!-- direction 5 -->
-                    <div id="slider-direction-5" class="slider-direction">
-                        <div class="slider-progress"></div>
-                        <div class="slider-content t-lfl s-tb slider-2">
-                            <!--<div class="title-container s-tb-c">-->
-                            <!--    <h1>Campus Life that  <span class="text-theme-colored2" style="transition: none; text-align: center; line-height: 70px; border-width: 0px; margin: 0px; padding: 0px; letter-spacing: 0px; font-weight: 800; color: #890C25;">  Inspires</span></h1>-->
-                            <!--    <p>From technical fests to sports, clubs, and cultural celebrations—VSIET offers a vibrant campus experience that nurtures holistic development.</p>-->
-                            <!--    <div class="slider-button">-->
-                            <!--        <ul>-->
-                            <!--            <li><a href="#" class="btn btn-tp rts-theme-btn btn-arrow" >Apply Now </a>-->
-
-                            <!--            </li>-->
-                            <!--        </ul>-->
-                            <!--    </div>-->
-                            <!--</div>-->
-                        </div>
-                    </div>
-
-
-
-                </div>
-            </div>
-            <!-- Slider end-->
-
-            <!-- Script Slider-->
-            <script src="inc/jquery-1.12.0.min.js"></script>
-            <script src="inc/jquery-ui.min.js"></script>
-            <script src="inc/custom-slider/js/jquery.nivo.slider.js" type="text/javascript"></script>
-            <script src="inc/custom-slider/home.js" type="text/javascript"></script>
-
-        </div>
-
-
-         <style>
-            @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
-
-            * {
-                margin: 0;
-                padding: 0;
-                box-sizing: border-box;
-            }
-
-            .slide-main-img-wrapper img {
-                width: 100%;
-                height: 100%;
-                /* object-fit: cover; */
-                will-change: transform;
-            }
-            .slide-bg-img img{
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-                will-change: transform;
-            }
-            .slider3 p {
-                color: #fff;
-                font-size: 0.75rem;
-                font-weight: 500;
-            }
-
-            .nav-items {
-                display: flex;
-                gap: 2rem;
-            }
-
-            .slider3 {
-                position: fixed;
-                bottom: 0;
-                left: 0;
-                width: 100vw;
-                padding: 3rem;
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                z-index: 2;
-            }
-
-            .slider-counter {
-                display: flex;
-            }
-
-            .slider-counter p,
-            .slider-counter>div {
-                width: 1.5rem;
-                display: flex;
-                justify-content: center;
-            }
-
-            .slider-counter p {
-                opacity: 0.35;
-            }
-
-            .count {
-                position: relative;
-                height: 1.125rem;
-                clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
-            }
-
-            .count p {
-                position: absolute;
-                transform: translateY(0px);
-                font-size: 1rem;
-                line-height: 1;
-                will-change: transform;
-                opacity: 1;
-            }
-
-            .slider {
-                position: relative;
-                width: 100vw;
-                height: 100vh;
-                overflow: hidden;
-            }
-
-            .slide {
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-            }
-
-            .slide-bg-img {
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
-                will-change: clip-path;
-            }
-
-            .slide-bg-img::after {
-                content: "";
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                display: block;
-                background-color: rgba(0, 0, 0, 0.5);
-            }
-
-            .slide-main-img {
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                width: 35%;
-                height: 50%;
-                z-index: 2;
-                box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
-                    rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
-            }
-
-            .slide-main-img-wrapper {
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
-                will-change: clip-path;
-            }
-
-            .slide-copy {
-                position: absolute;
-                top: 50%;
-                left: 15%;
-                transform: translate(-15%, -50%);
-                color: #fff;
-                z-index: 2;
-                text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
-            }
-
-            .slide-title {
-                position: relative;
-                width: 500px;
-                height: 50px;
-                margin-bottom: 0.75rem;
-                clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
-            }
-
-            .slide-title h1 {
-                position: absolute;
-                color: #fff;
-                font-size: 3rem;
-                font-weight: 700;
-                line-height: 1;
-                transform: translateY(0px);
-                will-change: transform;
-            }
-
-            .slide-description {
-                position: relative;
-                width: 500px;
-                height: 20px;
-                clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
-            }
-
-            .slide-description p {
-                position: absolute;
-                color: #fff;
-                font-size: 1.125rem;
-                font-weight: 600;
-                line-height: 1;
-                transform: translateY(0px);
-                will-change: transform;
-            }
-
-            @media (max-width: 900px) {
-                .slide-main-img {
-                    width: 85%;
-                }
-
-                .slide-copy {
-                    width: 75%;
-                    top: 70%;
-                    left: 50%;
-                    transform: translate(-50%, -70%);
-                }
-
-                .slide-title,
-                .slide-description {
-                    width: 100%;
-                }
-            }
-
-            .arrow {
-                position: absolute;
-                top: 50%;
-                transform: translateY(-50%);
-                font-size: 2.5rem;
-                color: white;
-                background-color: rgba(0, 0, 0, 0.4);
-                padding: 0.5rem 1rem;
-                border-radius: 50%;
-                cursor: pointer;
-                z-index: 10;
-                -webkit-user-select: none;
-                user-select: none;
-                transition: background-color 0.3s ease;
-            }
-
-            .arrow:hover {
-                background-color: rgba(0, 0, 0, 0.7);
-            }
-
-            .arrow.left {
-                left: 10rem;
-            }
-
-            .arrow.right {
-                right: 10rem;
-            }
-        </style>
-
-        <section class="slider3">
-            <div class="slider-counter">
-                <div class="count">
-                    <p>1</p>
-                </div>
-                <p>/</p>
-                <p>4</p>
-            </div>
-        </section>
-
-        <div class="slider">
-            <div class="arrow left">&#10094;</div>
-            <div class="arrow right">&#10095;</div>
-            <div class="slide">
-                <div class="slide-bg-img">
-                    <img src="slider/web_slide01.jpg" alt="">
-                </div>
-            </div>
-
-            <div class="slide-main-img">
-                <div class="slide-main-img-wrapper">
-                    <img src="slider/web_slide01.jpg" alt="">
-                </div>
-            </div>
-
-            <div class="slide-copy">
-                <div class="slide-title">
-                </div>
-                <div class="slide-description">
-                </div>
-            </div>
-        </div>
-        <script src="indexarrowscript.js"></script>
-
-        <div id="carousel2" class="carousel">
-            <link rel="stylesheet" href="button/css/carousel_css.css">
-            <div class="carousel3" id="carousel3"></div>
-            <script src="button/js/carousel_change.js"></script>
-        </div>
-
-        <button class="switch-btn" onclick="switchCarousel()">Switch Carousel</button>
-        <script>
-            let activeCarousel = 1;
-
-            function switchCarousel() {
-                document.getElementById("carousel1").classList.toggle("active");
-                document.getElementById("carousel2").classList.toggle("active");
-                document.getElementById("carousel4").classList.toggle("active");
-                activeCarousel = activeCarousel === 1 ? 2 : 1;
-            }
-        </script>
 </body>
+
 </html>
